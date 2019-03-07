@@ -1,0 +1,209 @@
+[2019-02-23T14:56:11.747] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-02-23T14:56:11.768] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-02-23T14:56:11.770] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-23T14:56:11.778] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-02-23T14:56:11.886] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-23T14:56:11.890] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-02-23T14:56:11.891] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 132 ms
+[2019-02-23T14:56:57.042] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 1
+[2019-02-23T14:56:57.054] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"host":"127.0.0.1","port":3050}, receivers: [1], opts: {"type":"response"}
+[2019-02-23T14:56:57.063] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 1,uid:null,reason:1000
+[2019-02-23T14:57:14.561] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 2
+[2019-02-23T14:57:14.575] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"host":"127.0.0.1","port":3050}, receivers: [2], opts: {"type":"response"}
+[2019-02-23T14:57:14.583] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 2,uid:null,reason:1000
+[2019-02-28T21:36:05.845] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-02-28T21:36:05.861] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-02-28T21:36:05.862] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T21:36:05.867] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-02-28T21:36:05.923] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T21:36:05.928] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-02-28T21:36:05.929] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 76 ms
+[2019-02-28T21:40:43.407] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 1
+[2019-02-28T21:42:31.480] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 53190
+[2019-02-28T21:42:31.481] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 1,uid:null,reason:{}
+[2019-02-28T21:42:47.629] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 2
+[2019-02-28T21:43:04.990] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] gate-server-1 receive removeServer signal: {"action":"removeServer","id":"master-server-1"}
+[2019-02-28T21:43:46.543] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 53444
+[2019-02-28T21:43:46.544] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 2,uid:null,reason:{}
+[2019-02-28T21:44:03.174] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 3
+[2019-02-28T21:45:16.035] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 53595
+[2019-02-28T21:45:16.036] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 3,uid:null,reason:{}
+[2019-02-28T21:45:30.775] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 4
+[2019-02-28T21:45:34.671] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T21:45:34.721] [ERROR] pinus - [gate-server-1 server.js] gate-server-1 no default error handler msg[{"code":"071haQWS0JjQHY1WMDXS0g8RWS0haQWc","encryptedData":"kaSg7jtoIxNfbemjwQQQhWJHL3WYlOSimy/Us6kt44yWoUGsPNX82HbH/Pmt2VScJ1IlkRNCc4SRfqwylkw3ApNbLlXEaucC9zS0Hu9Fhhsvi5OgnU9/84xnaDFwv82zggw5NRCOg8V1K0LZNMqpv3sUn2kOAQagMmU7Fkki3EOXSV1LOU+CP9uLkV2gzH/9hgtDMpceWDtgH/A1bukFi2FN5EGPmiDsj5CbqRDFzOukvyiAO4Hqa9/g0vSZ0UJB7dI6C7VuTJfY8cgdk1YkpS2p/jjIsTwe5a45ky2n4ao0/xYe1MQrSHG+NOKYiAEDUj7eUxNqzHbj8ntpJLcTM+mH7wJhsdRONvmvkMpOE4rimwKGP/YnxV49gwg5aAMKPn85HxVO+SknjZGpweOrawLdaswQFiQK7fpu8vElpt/DF7HSu2VuSne8thbdsDN1b1oyyQKyYmZ+UfogpDFImpftl+vkAdWhljz7/GH2w0I=","iv":"X7RITLLuzvFZAAIOpnxtCg=="}] to resolve unknown exception: sessionId:{"id":4,"frontendId":"gate-server-1","uid":null,"settings":{}} , error stack: TypeError: Cannot read property 'getConnection' of null
+    at Promise (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\app\database\MysqlCenter.ts:26:33)
+    at Function.MysqlCenter.mysqlExec (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\app\database\MysqlCenter.ts:25:16)
+    at Function.getUserInfoByopenId (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\app\database\MysqlCenter.ts:53:34)
+    at GateHandler.loginByOpenid (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\app\servers\gate\handler\gateHandler.ts:36:46)
+    at GateHandler.getWxOpenid (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\app\servers\gate\handler\gateHandler.ts:20:39)Error
+    at Object.pLogger.(anonymous function) [as error] (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus-logger\lib\logger.ts:72:34)
+    at handleError (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus\lib\server\server.ts:334:16)
+    at C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus\lib\server\server.ts:429:17
+    at Object.invokeCallback (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus\lib\util\utils.ts:33:20)
+    at callback (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus\lib\common\service\handlerService.ts:92:19)
+    at handler.(anonymous function).then (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus\lib\common\service\handlerService.ts:101:21)
+[2019-02-28T21:45:34.722] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":500}, receivers: [4], opts: {"type":"response"}
+[2019-02-28T21:48:28.485] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-02-28T21:48:28.565] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-02-28T21:48:28.568] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T21:48:28.584] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-02-28T21:48:28.709] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T21:48:28.717] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-02-28T21:48:28.718] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 218 ms
+[2019-02-28T21:48:36.045] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 1
+[2019-02-28T21:48:39.420] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T21:48:39.493] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050}}, receivers: [1], opts: {"type":"response"}
+[2019-02-28T22:18:58.101] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 54078
+[2019-02-28T22:18:58.102] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 1,uid:null,reason:{}
+[2019-02-28T22:19:23.471] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-02-28T22:19:23.498] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-02-28T22:19:23.499] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T22:19:23.507] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-02-28T22:19:23.662] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T22:19:23.667] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-02-28T22:19:23.668] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 187 ms
+[2019-02-28T22:19:23.711] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"chat-server-1","host":"127.0.0.1","port":6050,"args":"--inspect=10002","serverType":"chat","remoterPaths":[{"namespace":"sys","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\backend"},{"namespace":"user","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\remote"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\handler"],"pid":15100}}
+[2019-02-28T22:22:54.072] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 1
+[2019-02-28T22:23:59.835] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 44509
+[2019-02-28T22:23:59.836] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 1,uid:null,reason:{}
+[2019-02-28T22:24:37.041] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 2
+[2019-02-28T22:24:39.597] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:24:39.622] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050}}, receivers: [2], opts: {"type":"response"}
+[2019-02-28T22:26:37.145] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 44703
+[2019-02-28T22:26:37.145] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 2,uid:null,reason:{}
+[2019-02-28T22:27:52.638] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 3
+[2019-02-28T22:27:55.151] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:27:55.164] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050}}, receivers: [3], opts: {"type":"response"}
+[2019-02-28T22:28:29.220] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 3,uid:null,reason:1001
+[2019-02-28T22:28:46.648] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 4
+[2019-02-28T22:28:52.083] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:28:52.094] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050}}, receivers: [4], opts: {"type":"response"}
+[2019-02-28T22:29:41.588] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 45229
+[2019-02-28T22:29:41.589] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 4,uid:null,reason:{}
+[2019-02-28T22:29:57.975] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 5
+[2019-02-28T22:30:01.650] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:30:01.658] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050}}, receivers: [5], opts: {"type":"response"}
+[2019-02-28T22:32:45.002] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 45368
+[2019-02-28T22:32:45.002] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 5,uid:null,reason:{}
+[2019-02-28T22:35:00.538] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 6
+[2019-02-28T22:35:03.192] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:35:03.202] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050}}, receivers: [6], opts: {"type":"response"}
+[2019-02-28T22:37:19.332] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 45965
+[2019-02-28T22:37:19.333] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 6,uid:null,reason:{}
+[2019-02-28T22:39:52.285] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 7
+[2019-02-28T22:39:54.973] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:39:54.986] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050}}, receivers: [7], opts: {"type":"response"}
+[2019-02-28T22:43:08.265] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 46664
+[2019-02-28T22:43:08.266] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 7,uid:null,reason:{}
+[2019-02-28T22:43:33.839] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 8
+[2019-02-28T22:43:56.689] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-02-28T22:43:56.724] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-02-28T22:43:56.727] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T22:43:56.737] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-02-28T22:43:56.851] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T22:43:56.856] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-02-28T22:43:56.857] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 154 ms
+[2019-02-28T22:44:01.312] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 1
+[2019-02-28T22:44:04.106] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:44:04.130] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050,"userInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","gender":1,"language":"zh_CN","city":"Jiujiang","province":"Jiangxi","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","watermark":{"timestamp":1551365048,"appid":"wxa427e42117989ca3"},"chip":1000,"exp":0}}}, receivers: [1], opts: {"type":"response"}
+[2019-02-28T22:44:57.980] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 1,uid:null,reason:1001
+[2019-02-28T22:46:01.441] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 2
+[2019-02-28T22:46:06.793] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:46:06.798] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050,"userInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","gender":1,"language":"zh_CN","city":"Jiujiang","province":"Jiangxi","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","watermark":{"timestamp":1551365171,"appid":"wxa427e42117989ca3"},"chip":1000,"exp":0}}}, receivers: [2], opts: {"type":"response"}
+[2019-02-28T22:47:00.020] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 47393
+[2019-02-28T22:47:00.021] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 2,uid:null,reason:{}
+[2019-02-28T22:47:24.491] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 3
+[2019-02-28T22:47:28.466] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:47:28.479] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050,"userInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","gender":1,"language":"zh_CN","city":"Jiujiang","province":"Jiangxi","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","watermark":{"timestamp":1551365253,"appid":"wxa427e42117989ca3"},"chip":1000,"exp":0}}}, receivers: [3], opts: {"type":"response"}
+[2019-02-28T22:49:45.074] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-02-28T22:49:45.105] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-02-28T22:49:45.108] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T22:49:45.125] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-02-28T22:49:45.233] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-02-28T22:49:45.244] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-02-28T22:49:45.245] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 159 ms
+[2019-02-28T22:49:45.246] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":8012}}
+[2019-02-28T22:50:05.140] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] getSession session is created with session id: 1
+[2019-02-28T22:50:49.760] [INFO] logger - [gate-server-1 console] select chip, exp, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-02-28T22:50:49.786] [DEBUG] pinus - [gate-server-1 connector.js] [gate-server-1] send message reqId: 1, route: gate.gateHandler.queryEntry, msg: {"code":200,"msg":{"host":"127.0.0.1","port":3050,"userInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","gender":1,"language":"zh_CN","city":"Jiujiang","province":"Jiangxi","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","watermark":{"timestamp":1551365454,"appid":"wxa427e42117989ca3"},"chip":1000,"exp":0}}}, receivers: [1], opts: {"type":"response"}
+[2019-02-28T23:53:14.163] [DEBUG] pinus - [gate-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 47838
+[2019-02-28T23:53:14.164] [DEBUG] pinus - [gate-server-1 sessionService.js] session on [gate-server-1] is closed with session id: 1,uid:null,reason:{}
+[2019-03-04T19:28:47.422] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-04T19:28:47.439] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-04T19:28:47.440] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-04T19:28:47.446] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-04T19:28:47.518] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-04T19:28:47.526] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-04T19:28:47.527] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 97 ms
+[2019-03-04T19:31:39.019] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-04T19:31:39.057] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-04T19:31:39.058] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-04T19:31:39.071] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-04T19:31:39.169] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-04T19:31:39.174] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-04T19:31:39.175] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 143 ms
+[2019-03-05T18:43:52.280] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-05T18:43:52.295] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-05T18:43:52.296] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T18:43:52.302] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-05T18:43:52.368] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T18:43:52.375] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-05T18:43:52.375] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 88 ms
+[2019-03-05T18:53:40.574] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-05T18:53:40.604] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-05T18:53:40.605] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T18:53:40.620] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-05T18:53:40.734] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T18:53:40.740] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-05T18:53:40.741] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 156 ms
+[2019-03-05T18:53:40.743] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":19052}}
+[2019-03-05T18:53:40.905] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"chat-server-1","host":"127.0.0.1","port":6050,"args":"--inspect=10002","serverType":"chat","remoterPaths":[{"namespace":"sys","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\backend"},{"namespace":"user","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\remote"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\handler"],"pid":18960}}
+[2019-03-05T19:15:40.707] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] gate-server-1 receive removeServer signal: {"action":"removeServer","id":"connector-server-1"}
+[2019-03-05T19:18:40.741] [ERROR] pinus-admin - [gate-server-1 mqttClient.js] mqtt rpc client checkKeepAlive error timeout for 120000Error
+    at Object.pLogger.(anonymous function) [as error] (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus-logger\lib\logger.ts:72:34)
+    at MqttClient.checkKeepAlive (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus-admin\lib\protocol\mqtt\mqttClient.ts:221:28)
+    at Timeout._onTimeout (C:\Program Files\nodejs\pinus_demo\pinus\examples\websocket-chat-ts-run\game-server\node_modules\pinus-admin\lib\protocol\mqtt\mqttClient.ts:207:18)
+    at ontimeout (timers.js:424:11)
+    at tryOnTimeout (timers.js:288:5)
+    at listOnTimeout (timers.js:251:5)
+    at Timer.processTimers (timers.js:211:10)
+[2019-03-05T19:22:47.650] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-05T19:22:47.688] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-05T19:22:47.691] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:22:47.708] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-05T19:22:47.813] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:22:47.819] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-05T19:22:47.820] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 155 ms
+[2019-03-05T19:24:51.131] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-05T19:24:51.157] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-05T19:24:51.159] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:24:51.170] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-05T19:24:51.245] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:24:51.253] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-05T19:24:51.254] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 113 ms
+[2019-03-05T19:24:51.313] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":18904}}
+[2019-03-05T19:24:51.351] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"chat-server-1","host":"127.0.0.1","port":6050,"args":"--inspect=10002","serverType":"chat","remoterPaths":[{"namespace":"sys","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\backend"},{"namespace":"user","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\remote"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\handler"],"pid":18524}}
+[2019-03-05T19:25:30.506] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-05T19:25:30.532] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-05T19:25:30.533] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:25:30.542] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-05T19:25:30.650] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:25:30.659] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-05T19:25:30.660] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 144 ms
+[2019-03-05T19:25:30.667] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"chat-server-1","host":"127.0.0.1","port":6050,"args":"--inspect=10002","serverType":"chat","remoterPaths":[{"namespace":"sys","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\backend"},{"namespace":"user","serverType":"chat","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\remote"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\handler"],"pid":18576}}
+[2019-03-05T19:25:30.700] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] [gate-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":18556}}
+[2019-03-05T19:26:22.160] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-05T19:26:22.202] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-05T19:26:22.206] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:26:22.229] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-05T19:26:22.371] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-05T19:26:22.377] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-05T19:26:22.378] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 204 ms
+[2019-03-05T19:30:21.560] [DEBUG] pinus - [gate-server-1 monitorwatcher.js] gate-server-1 receive removeServer signal: {"action":"removeServer","id":"connector-server-1"}
+[2019-03-06T21:03:33.379] [INFO] pinus - [gate-server-1 application.js] application inited: "gate-server-1"
+[2019-03-06T21:03:33.406] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter before start...
+[2019-03-06T21:03:33.408] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-06T21:03:33.419] [INFO] pinus-admin - [gate-server-1 consoleService.js] try to connect master: "gate", "127.0.0.1", 3005
+[2019-03-06T21:03:33.537] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" enter after start...
+[2019-03-06T21:03:33.543] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" finish start
+[2019-03-06T21:03:33.544] [INFO] pinus - [gate-server-1 application.js] "gate-server-1" startup in 154 ms

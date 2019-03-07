@@ -1,0 +1,152 @@
+[2019-02-23T14:56:11.726] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-02-23T14:56:11.744] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-02-23T14:56:11.745] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-23T14:56:11.765] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-02-23T14:56:11.872] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-23T14:56:11.876] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-02-23T14:56:11.877] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 141 ms
+[2019-02-23T14:56:11.879] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":7828}}
+[2019-02-23T14:56:57.090] [INFO] logger - [chat-server-1 console] connected
+[2019-02-23T14:56:57.095] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onAdd, msg: {"user":"邓朗"}, groups: {}, opts: undefined
+[2019-02-23T14:57:14.596] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onAdd, msg: {"user":"xx"}, groups: {"connector-server-1":["邓朗*1001"]}, opts: undefined
+[2019-02-23T14:57:27.561] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,xx*1001,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":1,"route":"chat.chatHandler.send","body":{"rid":"1001","content":"123123","from":"xx","target":"*"},"compressGzip":0}
+[2019-02-23T14:57:27.565] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onChat, msg: {"msg":"123123","from":"xx","target":"*"}, groups: {"connector-server-1":["邓朗*1001","xx*1001"]}, opts: undefined
+[2019-02-23T14:57:27.568] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,xx*1001,connector-server-1], handle message result,err:null,resp:undefined
+[2019-02-23T14:57:33.416] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,邓朗*1001,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":1,"route":"chat.chatHandler.send","body":{"rid":"1001","content":"asd asd ","from":"邓朗","target":"*"},"compressGzip":0}
+[2019-02-23T14:57:33.417] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onChat, msg: {"msg":"asd asd ","from":"邓朗","target":"*"}, groups: {"connector-server-1":["邓朗*1001","xx*1001"]}, opts: undefined
+[2019-02-23T14:57:33.418] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,邓朗*1001,connector-server-1], handle message result,err:null,resp:undefined
+[2019-02-23T14:57:49.523] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,xx*1001,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":1,"route":"chat.chatHandler.send","body":{"rid":"1001","content":"1","from":"xx","target":"xx"},"compressGzip":0}
+[2019-02-23T14:57:49.524] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onChat, msg: {"msg":"1","from":"xx","target":"xx"}, groups: {"connector-server-1":["xx*1001"]}, opts: undefined
+[2019-02-23T14:57:49.525] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,xx*1001,connector-server-1], handle message result,err:null,resp:undefined
+[2019-02-23T14:57:54.693] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,xx*1001,connector-server-1], handle message: {"id":5,"type":0,"compressRoute":1,"route":"chat.chatHandler.send","body":{"rid":"1001","content":"123","from":"xx","target":"邓朗"},"compressGzip":0}
+[2019-02-23T14:57:54.694] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onChat, msg: {"msg":"123","from":"xx","target":"邓朗"}, groups: {"connector-server-1":["邓朗*1001"]}, opts: undefined
+[2019-02-23T14:57:54.695] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,xx*1001,connector-server-1], handle message result,err:null,resp:undefined
+[2019-02-23T14:58:00.353] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,邓朗*1001,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":1,"route":"chat.chatHandler.send","body":{"rid":"1001","content":"123","from":"邓朗","target":"邓朗"},"compressGzip":0}
+[2019-02-23T14:58:00.354] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onChat, msg: {"msg":"123","from":"邓朗","target":"邓朗"}, groups: {"connector-server-1":["邓朗*1001"]}, opts: undefined
+[2019-02-23T14:58:00.355] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,邓朗*1001,connector-server-1], handle message result,err:null,resp:undefined
+[2019-02-23T14:58:04.654] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,邓朗*1001,connector-server-1], handle message: {"id":5,"type":0,"compressRoute":1,"route":"chat.chatHandler.send","body":{"rid":"1001","content":"123","from":"邓朗","target":"xx"},"compressGzip":0}
+[2019-02-23T14:58:04.655] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onChat, msg: {"msg":"123","from":"邓朗","target":"xx"}, groups: {"connector-server-1":["xx*1001"]}, opts: undefined
+[2019-02-23T14:58:04.656] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,邓朗*1001,connector-server-1], handle message result,err:null,resp:undefined
+[2019-02-23T15:54:30.056] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onLeave, msg: {"user":"xx"}, groups: {"connector-server-1":["邓朗*1001"]}, opts: undefined
+[2019-02-23T16:12:42.415] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onLeave, msg: {"user":"邓朗"}, groups: {}, opts: undefined
+[2019-02-23T16:25:48.852] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] chat-server-1 receive removeServer signal: {"action":"removeServer","id":"gate-server-1"}
+[2019-02-28T21:36:05.734] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-02-28T21:36:05.751] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-02-28T21:36:05.753] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T21:36:05.773] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-02-28T21:36:05.848] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T21:36:05.849] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-02-28T21:36:05.850] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 107 ms
+[2019-02-28T21:36:05.911] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":13112}}
+[2019-02-28T21:43:04.988] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] chat-server-1 receive removeServer signal: {"action":"removeServer","id":"master-server-1"}
+[2019-02-28T21:48:28.430] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-02-28T21:48:28.451] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-02-28T21:48:28.452] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T21:48:28.478] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-02-28T21:48:28.581] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T21:48:28.583] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-02-28T21:48:28.584] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 143 ms
+[2019-02-28T21:48:28.605] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":2456}}
+[2019-02-28T21:48:28.688] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":12108}}
+[2019-02-28T22:19:23.620] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-02-28T22:19:23.640] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-02-28T22:19:23.642] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T22:19:23.665] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-02-28T22:19:23.719] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T22:19:23.721] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-02-28T22:19:23.721] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 90 ms
+[2019-02-28T22:43:56.687] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-02-28T22:43:56.708] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-02-28T22:43:56.710] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T22:43:56.737] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-02-28T22:43:56.822] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T22:43:56.824] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-02-28T22:43:56.825] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 125 ms
+[2019-02-28T22:43:56.836] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":14484}}
+[2019-02-28T22:49:45.014] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-02-28T22:49:45.032] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-02-28T22:49:45.034] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T22:49:45.065] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-02-28T22:49:45.150] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-02-28T22:49:45.152] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-02-28T22:49:45.153] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 129 ms
+[2019-02-28T22:49:45.209] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":9976}}
+[2019-02-28T22:49:45.221] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":8012}}
+[2019-03-04T19:28:47.225] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-04T19:28:47.244] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-04T19:28:47.245] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-04T19:28:47.271] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-04T19:28:47.353] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-04T19:28:47.355] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-04T19:28:47.356] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 120 ms
+[2019-03-04T19:28:47.385] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":14964}}
+[2019-03-04T19:28:47.499] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":1876}}
+[2019-03-04T19:31:38.863] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-04T19:31:38.895] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-04T19:31:38.897] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-04T19:31:38.922] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-04T19:31:39.038] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-04T19:31:39.040] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-04T19:31:39.041] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 156 ms
+[2019-03-04T19:31:39.147] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":6148}}
+[2019-03-04T19:31:39.152] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":16560}}
+[2019-03-05T18:43:52.107] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-05T18:43:52.129] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-05T18:43:52.130] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T18:43:52.149] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-05T18:43:52.231] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T18:43:52.234] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-05T18:43:52.235] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 117 ms
+[2019-03-05T18:43:52.257] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":9724}}
+[2019-03-05T18:43:52.347] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":7428}}
+[2019-03-05T18:53:40.804] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-05T18:53:40.816] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-05T18:53:40.818] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T18:53:40.834] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-05T18:53:40.917] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T18:53:40.919] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-05T18:53:40.920] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 109 ms
+[2019-03-05T19:15:40.711] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] chat-server-1 receive removeServer signal: {"action":"removeServer","id":"connector-server-1"}
+[2019-03-05T19:18:40.748] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] chat-server-1 receive removeServer signal: {"action":"removeServer","id":"gate-server-1"}
+[2019-03-05T19:22:47.557] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-05T19:22:47.588] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-05T19:22:47.591] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:22:47.648] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-05T19:22:47.742] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:22:47.744] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-05T19:22:47.745] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 172 ms
+[2019-03-05T19:22:47.801] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":18008}}
+[2019-03-05T19:24:51.199] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-05T19:24:51.232] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-05T19:24:51.234] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:24:51.258] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-05T19:24:51.364] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:24:51.366] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-05T19:24:51.367] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 145 ms
+[2019-03-05T19:25:30.489] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-05T19:25:30.507] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-05T19:25:30.508] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:25:30.529] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-05T19:25:30.674] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:25:30.676] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-05T19:25:30.677] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 178 ms
+[2019-03-05T19:25:30.701] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":18556}}
+[2019-03-05T19:26:21.478] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-05T19:26:21.507] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-05T19:26:21.508] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:26:21.534] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-05T19:26:21.706] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-05T19:26:21.710] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-05T19:26:21.713] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 224 ms
+[2019-03-05T19:26:22.349] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":18576}}
+[2019-03-05T19:30:21.560] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] chat-server-1 receive removeServer signal: {"action":"removeServer","id":"connector-server-1"}
+[2019-03-05T20:08:27.482] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] chat-server-1 receive removeServer signal: {"action":"removeServer","id":"gate-server-1"}
+[2019-03-06T21:03:33.357] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-06T21:03:33.376] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-06T21:03:33.378] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-06T21:03:33.402] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-06T21:03:33.503] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-06T21:03:33.507] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-06T21:03:33.508] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 140 ms
+[2019-03-06T21:03:33.510] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":9392}}
+[2019-03-06T21:03:33.518] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\pinus_demo\\pinus\\examples\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":3140}}
