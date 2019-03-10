@@ -5,6 +5,9 @@ import MysqlCenter from '../../../database/MysqlCenter';
 import RES from '../../../RES';
 import AreaPlayer from '../areaPlayer';
 import AreaRoom from '../areaRoom';
+import GameConfig from '../../../gameConfig';
+
+const roomConfig = GameConfig.roomConfig;
 
 export default function(app: Application) {
     return new ChatHandler(app);
@@ -14,6 +17,9 @@ export class ChatHandler {
     constructor(private app: Application) {
     }
 
+    /**
+     * 玩家列表
+     */
     playerList: {[openId: string]: AreaPlayer} = {};
 
     /**
@@ -27,7 +33,7 @@ export class ChatHandler {
     doAllocRoom(roomId: string, player: AreaPlayer) {
         let areaId = player.areaId;
         let room = new AreaRoom(areaId, roomId);    // 有可能报错, 无areaId 玩家强行登入
-        room.initConfig(2, 100, 100);               // 测试数据, 正式数据应当写在json文件中
+        room.initConfig(roomConfig.maxNum, roomConfig.minChip, roomConfig.betChip);               // 测试数据, 正式数据应当写在json文件中
         room.playerEnter(player);
     }
 

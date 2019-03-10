@@ -21,5 +21,13 @@ export default class GameConfig {
         defaultChip: 1000,
         defaultexp: 0,
     }
+    /**
+     * 房间参数配置
+     */
+    static roomConfig = {
+        minChip: 100,
+        betChip: 100,
+        maxNum: 2,
+    }
 
 }
