@@ -56,58 +56,9 @@ export class EntryHandler {
             msg: {}
         }
     }
-    /**
-     * 开始匹配玩家
-     */
-    addMatchOnlinePlayer(msg: {roomType: number}, session: FrontendSession) {
-        if(!msg || !msg.roomType) {
-            return {code: RES.ERR_PARAM, msg: null};
-        }
+    
 
-        let openId = session.uid;
-        if(!openId) {
-            return {code: RES.ERR_NOT_LOGIN, msg: null};
-        }
-
-        if(this.matchPlayerList[openId]) {
-            return {code: RES.ERR_IS_IN_MASTH_LIST, msg: null}
-        }
-
-        this.matchPlayerList[openId] = session;
-        
-        return {code: RES.OK, msg: {MatchPlayer: true}}
-    }
-    /**
-     * 删除正在匹配的玩家
-     */
-    removeMatchOnlinePlayer(msg: {roomType: number}, session: FrontendSession) {
-        if(!msg || !msg.roomType) {
-            return {code: RES.ERR_PARAM, msg: null};
-        }
-        let openId = session.uid;
-        if(!openId) {
-            return {code: RES.ERR_NOT_LOGIN, msg: null};
-        }
-
-        if(!this.matchPlayerList[openId]) {
-            return {code: RES.ERR_NOT_IN_MASTH_LIST, msg: null}
-        }
-
-        this.matchPlayerList[openId] = null;
-        delete this.matchPlayerList[openId]
-
-        return {code: RES.OK, msg: {MatchPlayer: false}}
-    }
-
-    /**
-     * 为匹配玩家分配房间
-     * step1, 给玩家提供host port地址, 房间号
-     */
-    allocRoomToMatchPlayer() {
-        for(let key in this.matchPlayerList) {
-            // this.matchPlayerList[key]
-        }
-    }
+    
 
     
 

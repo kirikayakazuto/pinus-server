@@ -1,4 +1,4 @@
-import { UserInfo } from "../../gameInterface";
+import { UserInfo } from "../gameInterface";
 import { Session } from "pinus";
 import {EventEmitter} from "events"
 

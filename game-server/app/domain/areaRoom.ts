@@ -1,6 +1,6 @@
 import { Channel, pinus } from "pinus";
 import AreaPlayer from "./areaPlayer";
-import RES from "../../RES";
+import RES from "../RES";
 
 /**
  * 游戏房间
@@ -69,9 +69,17 @@ export default class AreaRoom {
         }
 
         this.playerList[player.openId] = player;
+        this.currentPlayerNum ++;
 
         player.enterRoom(this.roomId);
-        this.getChannel().add(player.openId, player.serverId)
+        this.getChannel().add(player.openId, player.serverId);
+
+        this.getChannel().pushMessage(
+            'onPlayerEnterRoom',
+            {
+                playerInfo: player.playerInfo,
+            }
+        );
 
         return {code: RES.OK, msg: {}}
     }
@@ -83,6 +91,7 @@ export default class AreaRoom {
 
         this.playerList[player.openId] = null;
         delete this.playerList[player.openId];
+        this.currentPlayerNum --;
 
         player.quitRoom();
 

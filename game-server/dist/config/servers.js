@@ -11,7 +11,7 @@ module.exports = {
             }
         ],
         'chat': [
-            { 'id': 'chat-server-1', 'host': '127.0.0.1', 'port': 6050, 'args': '--inspect=10002' }
+            { 'id': 'chat-server-1', 'host': '127.0.0.1', 'port': 6150, 'args': '--inspect=10002' }
         ],
         'gate': [
             {

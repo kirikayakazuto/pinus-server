@@ -1,7 +1,7 @@
-import Player from "../domain/player";
 import { Channel } from "pinus";
 import Consts from "../consts/consts";
 import actionManagerService from "./actionManagerService";
+import AreaPlayer from "../domain/areaPlayer";
 
 export default class AreaService {
 
@@ -9,7 +9,7 @@ export default class AreaService {
 
     added: any[] = [];          // 增加的实体
     reduced: any[] = [];        //  减少的实体
-    playerList: {[openId: string]: Player} = {};    // 玩家列表
+    playerList: {[openId: string]: AreaPlayer} = {};    // 玩家列表
     entities = {};
     channel: Channel = null;
     actionManagerService: actionManagerService = null;
@@ -68,7 +68,7 @@ export default class AreaService {
      * 给玩家 添加监听事件
      * @param player 
      */
-    addEvent(player: Player) {
+    addEvent(player: AreaPlayer) {
         
     }
 
