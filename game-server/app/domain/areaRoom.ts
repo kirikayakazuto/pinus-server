@@ -1,6 +1,7 @@
 import { Channel, pinus } from "pinus";
 import AreaPlayer from "./areaPlayer";
 import RES from "../RES";
+import EventName from "../EventName";
 
 /**
  * 游戏房间
@@ -13,7 +14,8 @@ export default class AreaRoom {
     betChip = 100;              // 没把所需的金币数目
 
     maxNum = 2;                 // 房间最大人数
-    playerList: {[openId: string]: AreaPlayer} = {};
+    // playerList: {[openId: string]: AreaPlayer} = {};
+    playerList: Array<AreaPlayer> = [null, null];
     actionManagerService: any = null;
 
     currentPlayerNum = 0;                 // 房间当前玩家数目
@@ -46,6 +48,19 @@ export default class AreaRoom {
 
     }
     /**
+     * 清理房间
+     */
+    clearRoom() {
+        for(let key in this.playerList) {
+            let data = this.playerQuit(this.playerList[key]);;
+            if(data.code != RES.OK) {
+                return false;
+            }
+        }
+        this.getChannel().destroy();
+        return true;
+    }
+    /**
      * 获取通道
      * 有就返回, 没有就新建一个
      */
@@ -58,24 +73,38 @@ export default class AreaRoom {
     }
     /**
      * 玩家进入
+     * step1 玩家进入房间
+     * step2 玩家坐下
      * @param player 
      */
     playerEnter(player: AreaPlayer) {
         if(this.currentPlayerNum > this.maxNum) {
             return {code: RES.ERR_ROOM_FULL, msg: null};
         }
-        if(this.playerList[player.openId]) {
+        if(player.seatId != -1) {
             return {code: RES.ERR_PLAYER_IS_IN_ROOM, msg: null};
         }
 
-        this.playerList[player.openId] = player;
-        this.currentPlayerNum ++;
+        player.enterRoom(this.roomId);      // 玩家进入房间
+        this.currentPlayerNum ++;           // 这时玩家还没有坐下
 
-        player.enterRoom(this.roomId);
+        // 返回房间内其他人的信息
+        for(let i=0; i<this.playerList.length; i++) {
+            if(!this.playerList[i]) {
+                continue;
+            }
+            this.getChannel().__channelService__.pushMessageByUids(EventName.onPlayerEnterRoom, this.playerList[i].playerInfo, [{uid: player.openId, sid: player.serverId}])
+        }
+        
+
+        if(!this.playerSitdown(player)) {          // 玩家坐下
+            return {code: RES.ERR_PARAM, msg: null}
+        }   
+
         this.getChannel().add(player.openId, player.serverId);
-
+        // 广播自己进入房间的信息
         this.getChannel().pushMessage(
-            'onPlayerEnterRoom',
+            EventName.onUserEnterRoom,
             {
                 playerInfo: player.playerInfo,
             }
@@ -83,16 +112,63 @@ export default class AreaRoom {
 
         return {code: RES.OK, msg: {}}
     }
-
+    /**
+     * 玩家坐下
+     */
+    playerSitdown(player: AreaPlayer) {
+        let seatId = this.doSearchEmptySeat();
+        if(seatId == -1) {
+            return false;
+        }
+        this.playerList[seatId] = player;
+        player.sitDown(seatId);
+        return true;
+    }
+    /**
+     * 寻找一个位子
+     */
+    doSearchEmptySeat() {
+        for(let i=0; i<this.maxNum; i++) {
+            if(this.playerList[i] == null) {    // 找到一个空位
+                return i;
+            }
+        }
+        return -1;
+    }
+    /**
+     * 玩家站起
+     */
+    playerStandup(player: AreaPlayer) {
+        if(player.seatId == -1) {
+            return true;
+        }
+        this.playerList[player.seatId] = null;
+        player.standUp();
+        return true;
+    }
+    /**
+     * 玩家离开房间
+     * @param player 
+     */
     playerQuit(player: AreaPlayer) {
-        if(!this.playerList[player.openId]) {
+        if(player.seatId == -1) {
+            return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
+        }
+        if(!this.playerList[player.seatId]) {
             return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
         }
 
-        this.playerList[player.openId] = null;
-        delete this.playerList[player.openId];
-        this.currentPlayerNum --;
+        this.getChannel().leave(player.openId, player.serverId);
+        this.getChannel().pushMessage(
+            EventName.onPlayerQuitRoom,
+            {
+                playerOpenId: player.openId,
+            }
+        );
 
+        this.playerStandup(player);
+
+        this.currentPlayerNum --;
         player.quitRoom();
 
         return {code: RES.OK, msg: {}}

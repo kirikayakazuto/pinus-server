@@ -342,3 +342,514 @@
 [2019-03-12T00:04:44.634] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
 [2019-03-12T00:04:55.530] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
 [2019-03-12T00:04:55.531] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":210,"msg":null}
+[2019-03-12T15:39:42.492] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T15:39:42.506] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T15:39:42.509] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T15:39:42.533] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T15:39:42.673] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T15:39:42.676] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T15:39:42.677] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 178 ms
+[2019-03-12T15:39:42.692] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":3196}}
+[2019-03-12T15:39:42.787] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":12720}}
+[2019-03-12T15:39:55.497] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T15:39:55.500] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T15:39:55.661] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T15:39:55.686] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T15:40:04.247] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T15:40:04.249] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T15:40:05.582] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T15:40:05.583] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":false}}
+[2019-03-12T15:54:53.566] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T15:54:53.583] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T15:54:53.586] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T15:54:53.607] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T15:54:53.706] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T15:54:53.710] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T15:54:53.711] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 135 ms
+[2019-03-12T15:55:19.470] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T15:55:19.490] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T15:55:19.493] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T15:55:19.517] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T15:55:19.682] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T15:55:19.684] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T15:55:19.687] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 203 ms
+[2019-03-12T15:55:27.915] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T15:55:27.917] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T15:55:28.042] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T15:55:28.059] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T15:55:32.308] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T15:55:32.310] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T16:40:49.744] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T16:40:49.768] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T16:40:49.769] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T16:40:49.792] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T16:40:49.891] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T16:40:49.893] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T16:40:49.894] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 135 ms
+[2019-03-12T16:40:49.904] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":10920}}
+[2019-03-12T16:41:04.514] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T16:41:04.516] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T16:41:04.663] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T16:41:04.682] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T16:41:07.615] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T16:41:07.618] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T16:41:07.665] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T16:44:42.364] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T16:44:42.463] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T16:44:42.465] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T16:44:42.490] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T16:44:42.607] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T16:44:42.609] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T16:44:42.609] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 230 ms
+[2019-03-12T16:44:42.661] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":4524}}
+[2019-03-12T16:45:09.697] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T16:45:09.699] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T16:45:09.867] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T16:45:09.887] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T16:45:11.846] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T16:45:11.849] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T16:45:11.868] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:11.870] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T16:45:12.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:12.867] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:13.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:13.867] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:14.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:14.867] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:15.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:15.867] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:16.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:16.867] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:17.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:17.867] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:18.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:18.867] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:19.367] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:19.868] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:45:20.368] [INFO] logger - [chat-server-1 console] ===
+[2019-03-12T16:47:15.709] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T16:47:15.730] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T16:47:15.732] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T16:47:15.781] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T16:47:15.912] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T16:47:15.914] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T16:47:15.915] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 195 ms
+[2019-03-12T16:47:20.048] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T16:47:20.051] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T16:47:20.161] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T16:47:20.181] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T16:47:28.081] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T16:47:28.082] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T16:47:28.162] [INFO] logger - [chat-server-1 console] pushmsg
+[2019-03-12T16:47:28.164] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T17:06:08.469] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T17:06:08.493] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T17:06:08.495] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:06:08.540] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T17:06:08.691] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:06:08.693] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T17:06:08.694] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 210 ms
+[2019-03-12T17:06:08.709] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":11760}}
+[2019-03-12T17:06:08.850] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":11488}}
+[2019-03-12T17:06:11.027] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T17:06:11.030] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:06:11.150] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T17:06:11.168] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:06:13.426] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:06:13.428] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T17:06:13.652] [INFO] logger - [chat-server-1 console] connector-server-1 Channel {
+  apushMessage: [Function: pushMessage],
+  name: 'area_room_iHZlOuztNKpQRmru',
+  groups: {},
+  records: {},
+  __channelService__:
+   ChannelComponent {
+     apushMessageByUids: [Function: pushMessageByUids],
+     abroadcast: [Function: broadcast],
+     app:
+      Application {
+        loaded: [Array],
+        components: [Object],
+        settings: [Object],
+        event: [EventEmitter],
+        master: [Object],
+        servers: [Object],
+        serverTypeMaps: [Object],
+        serverTypes: [Array],
+        usedPlugins: [],
+        clusterSeq: {},
+        astart: [Function: start],
+        aconfigure: [Function: configure],
+        base:
+         'C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist',
+        env: 'development',
+        main:
+         'C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js',
+        serverType: 'chat',
+        serverId: 'chat-server-1',
+        mode: 'clusters',
+        type: 'all',
+        curServer: [Object],
+        state: 4,
+        startTime: 1552381568484,
+        backendSessionService: [BackendSessionComponent],
+        channelService: [Circular],
+        rpcInvoke: [Function: bound rpcInvoke] },
+     channels: { area_room_iHZlOuztNKpQRmru: [Circular] },
+     prefix: undefined,
+     store: undefined,
+     broadcastFilter: undefined,
+     channelRemote: ChannelRemote { app: [Application] },
+     name: '__channel__' },
+  state: 0,
+  userAmount: 0 }
+[2019-03-12T17:06:13.657] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T17:09:07.096] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T17:09:07.114] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T17:09:07.115] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:09:07.143] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T17:09:07.284] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:09:07.288] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T17:09:07.290] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 184 ms
+[2019-03-12T17:09:07.383] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":3980}}
+[2019-03-12T17:09:07.464] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":9912}}
+[2019-03-12T17:09:09.388] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T17:09:09.393] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:09:09.503] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T17:09:09.522] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:09:10.911] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:09:10.912] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T17:09:11.012] [INFO] logger - [chat-server-1 console] connector-server-1 Channel {
+  apushMessage: [Function: pushMessage],
+  name: 'area_room_thqUAjIWhbVdwwDm',
+  groups: { 'connector-server-1': [ 'oKH7c4g30VXZxQ5CV3iRQo-QjNo8' ] },
+  records:
+   { 'oKH7c4g30VXZxQ5CV3iRQo-QjNo8':
+      { sid: 'connector-server-1',
+        uid: 'oKH7c4g30VXZxQ5CV3iRQo-QjNo8' } },
+  __channelService__:
+   ChannelComponent {
+     apushMessageByUids: [Function: pushMessageByUids],
+     abroadcast: [Function: broadcast],
+     app:
+      Application {
+        loaded: [Array],
+        components: [Object],
+        settings: [Object],
+        event: [EventEmitter],
+        master: [Object],
+        servers: [Object],
+        serverTypeMaps: [Object],
+        serverTypes: [Array],
+        usedPlugins: [],
+        clusterSeq: {},
+        astart: [Function: start],
+        aconfigure: [Function: configure],
+        base:
+         'C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist',
+        env: 'development',
+        main:
+         'C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js',
+        serverType: 'chat',
+        serverId: 'chat-server-1',
+        mode: 'clusters',
+        type: 'all',
+        curServer: [Object],
+        state: 4,
+        startTime: 1552381747106,
+        backendSessionService: [BackendSessionComponent],
+        channelService: [Circular],
+        rpcInvoke: [Function: bound rpcInvoke] },
+     channels: { area_room_thqUAjIWhbVdwwDm: [Circular] },
+     prefix: undefined,
+     store: undefined,
+     broadcastFilter: undefined,
+     channelRemote: ChannelRemote { app: [Application] },
+     name: '__channel__' },
+  state: 0,
+  userAmount: 1 }
+[2019-03-12T17:09:11.020] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T17:10:31.146] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T17:10:31.185] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T17:10:31.187] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:10:31.246] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T17:10:31.402] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:10:31.404] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T17:10:31.404] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 233 ms
+[2019-03-12T17:10:31.674] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":8456}}
+[2019-03-12T17:10:31.876] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":7176}}
+[2019-03-12T17:10:33.660] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T17:10:33.664] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:10:33.774] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T17:10:33.800] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:10:35.905] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:10:35.906] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T17:10:36.281] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T17:13:01.175] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:13:01.177] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":210,"msg":null}
+[2019-03-12T17:34:27.367] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T17:34:27.389] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T17:34:27.392] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:34:27.416] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T17:34:27.509] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:34:27.511] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T17:34:27.512] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 131 ms
+[2019-03-12T17:34:27.553] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":10072}}
+[2019-03-12T17:34:27.610] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":11948}}
+[2019-03-12T17:34:48.178] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T17:34:48.183] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:34:48.361] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T17:34:48.381] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:35:28.650] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T17:35:28.674] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T17:35:28.675] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:35:28.713] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T17:35:28.877] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:35:28.881] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T17:35:28.883] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 217 ms
+[2019-03-12T17:35:29.094] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":11908}}
+[2019-03-12T17:35:41.119] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T17:35:41.122] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:35:41.270] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T17:35:41.290] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:35:42.350] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:35:42.353] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T17:35:42.358] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:35:47.065] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:35:47.066] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T17:35:53.417] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:35:53.418] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T17:36:03.368] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:36:03.369] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":false}}
+[2019-03-12T17:36:04.435] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:36:04.435] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":false}}
+[2019-03-12T17:36:48.931] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T17:36:48.970] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T17:36:48.971] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:36:49.008] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T17:36:49.135] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T17:36:49.137] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T17:36:49.138] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 194 ms
+[2019-03-12T17:37:04.373] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T17:37:04.375] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:37:04.508] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T17:37:04.541] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:37:05.329] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T17:37:05.330] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T17:37:05.336] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T17:37:06.747] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:37:06.748] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T17:37:07.010] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T17:37:08.919] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:37:08.920] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T17:37:09.010] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T17:37:22.503] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:37:22.506] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":false}}
+[2019-03-12T17:37:23.470] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T17:37:23.471] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":false}}
+[2019-03-12T18:42:45.460] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T18:42:45.477] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T18:42:45.478] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:42:45.500] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T18:42:45.595] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:42:45.597] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T18:42:45.602] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 132 ms
+[2019-03-12T18:42:45.698] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":9756}}
+[2019-03-12T18:42:54.419] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T18:42:54.421] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:42:54.568] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T18:42:54.596] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:42:55.511] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:42:55.515] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T18:42:55.521] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:42:57.292] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T18:42:57.293] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T18:42:57.571] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"oKH7c4g30VXZxQ5CV3iRQo-QjNo8":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1},"serverId":"connector-server-1","areaId":1,"roomId":"onHVULJ1mpP13npO","seatId":-1,"eventEmitter":{"_events":{},"_eventsCount":0}}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T18:42:57.575] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T18:43:00.878] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T18:43:00.879] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T18:43:01.073] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"oKH7c4g30VXZxQ5CV3iRQo-QjNo8":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1},"serverId":"connector-server-1","areaId":1,"roomId":"onHVULJ1mpP13npO","seatId":-1,"eventEmitter":{"_events":{},"_eventsCount":0}},"oKH7c4g30VXZxQ5CV3iRQo-QjNo9":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1},"serverId":"connector-server-1","areaId":1,"roomId":"onHVULJ1mpP13npO","seatId":-1,"eventEmitter":{"_events":{},"_eventsCount":0}}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T18:43:01.074] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T18:43:54.453] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T18:43:54.476] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T18:43:54.483] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:43:54.517] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T18:43:54.617] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:43:54.619] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T18:43:54.620] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 152 ms
+[2019-03-12T18:43:54.621] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":12068}}
+[2019-03-12T18:43:54.763] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":12592}}
+[2019-03-12T18:44:08.452] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T18:44:08.455] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:44:08.567] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T18:44:08.589] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:44:09.048] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:44:09.049] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T18:44:09.054] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:44:11.067] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T18:44:11.068] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T18:44:11.072] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"oKH7c4g30VXZxQ5CV3iRQo-QjNo8":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1},"serverId":"connector-server-1","areaId":1,"roomId":"tagRRsa2oeEKABnR","seatId":-1,"eventEmitter":{"_events":{},"_eventsCount":0}}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T18:44:11.077] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T18:45:28.854] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T18:45:28.891] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T18:45:28.892] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:45:28.913] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T18:45:29.150] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:45:29.154] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T18:45:29.158] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 272 ms
+[2019-03-12T18:45:35.406] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T18:45:35.409] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:45:35.543] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T18:45:35.569] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:45:36.828] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:45:36.830] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T18:45:36.835] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:45:38.578] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T18:45:38.579] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T18:45:39.048] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"oKH7c4g30VXZxQ5CV3iRQo-QjNo8":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1},"serverId":"connector-server-1","areaId":1,"roomId":"iblc19zJHujfZkxi","seatId":-1,"eventEmitter":{"_events":{},"_eventsCount":0}}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T18:45:39.051] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T18:46:41.412] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T18:46:41.450] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T18:46:41.466] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:46:41.518] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T18:46:41.666] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T18:46:41.668] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T18:46:41.671] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 246 ms
+[2019-03-12T18:46:47.945] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T18:46:47.948] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:46:48.103] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T18:46:48.128] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:46:49.327] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T18:46:49.329] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T18:46:49.341] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T18:46:50.536] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T18:46:50.537] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T18:46:50.605] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T18:46:50.608] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T19:08:25.719] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T19:08:25.756] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T19:08:25.757] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:08:25.852] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T19:08:26.050] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:08:26.053] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T19:08:26.054] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 318 ms
+[2019-03-12T19:08:26.367] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":10336}}
+[2019-03-12T19:08:30.225] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T19:08:30.229] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:08:30.372] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T19:08:30.398] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:08:31.034] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:08:31.037] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T19:08:31.042] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:08:32.650] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:08:32.651] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:08:32.878] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: [null,null], groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T19:08:32.882] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T19:08:43.171] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:08:43.172] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:08:43.380] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: [{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1},"serverId":"connector-server-1","areaId":1,"roomId":"DQDXD4Xcz4JeboMT","seatId":0,"eventEmitter":{"_events":{},"_eventsCount":0}},null], groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:08:43.381] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:16:08.414] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T19:16:08.431] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T19:16:08.432] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:16:08.451] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T19:16:08.534] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:16:08.542] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T19:16:08.544] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 118 ms
+[2019-03-12T19:16:12.504] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T19:16:12.507] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:16:12.638] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T19:16:12.661] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:16:13.574] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:16:13.575] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T19:16:13.579] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:16:16.180] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:16:16.181] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:16:16.639] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T19:16:19.558] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:16:19.559] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:16:19.638] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:16:19.639] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:18:06.291] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[3,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:18:06.293] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T19:18:06.300] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[3,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":501,"msg":null}
+[2019-03-12T19:18:07.531] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[4,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:18:07.533] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T19:18:07.538] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[4,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":501,"msg":null}
+[2019-03-12T19:18:08.429] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[3,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:18:08.431] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[3,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":209,"msg":null}
+[2019-03-12T19:18:17.055] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T19:18:17.093] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T19:18:17.095] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:18:17.127] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T19:18:17.346] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:18:17.349] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T19:18:17.350] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 279 ms
+[2019-03-12T19:18:17.710] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":12588}}
+[2019-03-12T19:18:19.313] [DEBUG] pinus - [chat-server-1 monitorwatcher.js] [chat-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4050,"clientPort":3050,"frontend":"true","args":"--inspect=10001","serverType":"connector","remoterPaths":[{"namespace":"sys","serverType":"connector","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\frontend"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\connector\\handler"],"pid":12536}}
+[2019-03-12T19:18:21.170] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T19:18:21.173] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:18:21.295] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T19:18:21.319] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:18:22.305] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:18:22.307] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T19:18:22.311] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:18:23.312] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:18:23.314] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:18:23.796] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T19:18:25.867] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:18:25.868] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:18:26.296] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:18:26.298] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:19:01.565] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T19:19:01.591] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T19:19:01.594] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:19:01.635] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T19:19:01.803] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:19:01.805] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T19:19:01.807] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 225 ms
+[2019-03-12T19:19:03.483] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T19:19:03.486] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:19:03.606] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T19:19:03.632] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:19:04.203] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:19:04.204] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T19:19:04.209] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:19:05.220] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:19:05.221] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:19:05.614] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T19:19:06.902] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:19:06.903] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:19:07.111] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:19:07.115] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:20:07.816] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[3,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:20:07.819] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T19:20:07.827] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[3,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":501,"msg":null}
+[2019-03-12T19:20:08.747] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[4,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:20:08.752] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T19:20:08.755] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[4,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":501,"msg":null}
+[2019-03-12T19:20:16.596] [INFO] pinus - [chat-server-1 application.js] application inited: "chat-server-1"
+[2019-03-12T19:20:16.656] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter before start...
+[2019-03-12T19:20:16.657] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:20:16.692] [INFO] pinus-admin - [chat-server-1 consoleService.js] try to connect master: "chat", "127.0.0.1", 3005
+[2019-03-12T19:20:16.889] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" enter after start...
+[2019-03-12T19:20:16.892] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" finish start
+[2019-03-12T19:20:16.893] [INFO] pinus - [chat-server-1 application.js] "chat-server-1" startup in 248 ms
+[2019-03-12T19:20:23.642] [INFO] logger - [chat-server-1 console] connected
+[2019-03-12T19:20:23.644] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:20:23.773] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo8" limit 1
+[2019-03-12T19:20:23.814] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:20:24.373] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":2,"type":0,"compressRoute":0,"route":"chat.chatHandler.entryArea","body":{"areaId":1},"compressGzip":0}
+[2019-03-12T19:20:24.374] [INFO] logger - [chat-server-1 console] select openId, nickName, avatarUrl, gender, chip, exp, city, country, province, can_login from user_info where openId = "oKH7c4g30VXZxQ5CV3iRQo-QjNo9" limit 1
+[2019-03-12T19:20:24.379] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{}}
+[2019-03-12T19:20:25.641] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:20:25.642] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:20:25.774] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"]}, opts: undefined
+[2019-03-12T19:20:27.579] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":3,"type":0,"compressRoute":0,"route":"chat.chatHandler.addMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:20:27.581] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":true}}
+[2019-03-12T19:20:27.772] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:20:27.773] [DEBUG] pinus - [chat-server-1 channelService.js] [chat-server-1] channelService sendMessageByGroup route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, groups: {"connector-server-1":["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"]}, opts: undefined
+[2019-03-12T19:20:33.202] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:20:33.203] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[2,oKH7c4g30VXZxQ5CV3iRQo-QjNo9,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":false}}
+[2019-03-12T19:20:34.519] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message: {"id":4,"type":0,"compressRoute":0,"route":"chat.chatHandler.removeMatchOnlinePlayer","body":{"rid":1,"roomType":1},"compressGzip":0}
+[2019-03-12T19:20:34.522] [DEBUG] forward-log - [chat-server-1 msgRemote.js] session:[1,oKH7c4g30VXZxQ5CV3iRQo-QjNo8,connector-server-1], handle message result,err:null,resp:{"code":1,"msg":{"MatchPlayer":false}}

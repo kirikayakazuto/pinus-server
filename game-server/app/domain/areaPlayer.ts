@@ -10,7 +10,7 @@ export default class AreaPlayer {
     serverId = "";                  // 服务器id
 
     areaId = -1;                    // 区间号
-    roomId = "";                    // 房间号
+    roomId: string = null;                    // 房间号
     seatId = -1;                    // 座位号
 
     eventEmitter: EventEmitter = new EventEmitter();    // 事件监听, 发送
@@ -41,5 +41,13 @@ export default class AreaPlayer {
     }
     quitRoom() {
         this.roomId = null;
+    }
+
+    sitDown(seatId: number) {
+        this.seatId = seatId;
+    }
+
+    standUp() {
+        this.seatId = -1;
     }
 }

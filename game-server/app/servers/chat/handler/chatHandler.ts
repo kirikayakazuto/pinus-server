@@ -10,7 +10,9 @@ import utils from '../../../util/utils';
 const roomConfig = GameConfig.roomConfig;
 
 export default function(app: Application) {
-    return new ChatHandler(app);
+    let chat = new ChatHandler(app);
+    setInterval(chat.allocRoomToMatchPlayer.bind(chat), 500, 1);
+    return chat;
 }
 
 export class ChatHandler {
@@ -35,7 +37,6 @@ export class ChatHandler {
      * 开始匹配玩家
      */
     async addMatchOnlinePlayer(msg: {roomType: number}, session: BackendSession) {
-        console.log("=========in");
         if(!msg || !msg.roomType) {
             return {code: RES.ERR_PARAM, msg: null};
         }
@@ -43,6 +44,10 @@ export class ChatHandler {
         let openId = session.uid;
         if(!openId) {
             return {code: RES.ERR_NOT_LOGIN, msg: null};
+        }
+        // 判断用户是否在服务器中
+        if(!this.onlinePlayerList[openId]) {
+            return {code: RES.ERR_PARAM, msg: null}
         }
 
         if(this.matchPlayerList[openId]) {
@@ -60,19 +65,39 @@ export class ChatHandler {
         if(!msg || !msg.roomType) {
             return {code: RES.ERR_PARAM, msg: null};
         }
+
         let openId = session.uid;
         if(!openId) {
             return {code: RES.ERR_NOT_LOGIN, msg: null};
         }
-
-        if(!this.matchPlayerList[openId]) {
+        
+        let player = this.matchPlayerList[openId];
+        if(!player) {
             return {code: RES.ERR_NOT_IN_MASTH_LIST, msg: null}
+        }
+        
+        if(!player.roomId) {  // 判断这个玩家是否已经进入了房间
+            this.playerQuitRoom(player);
         }
 
         this.matchPlayerList[openId] = null;
-        delete this.matchPlayerList[openId]
+        delete this.matchPlayerList[openId];
 
         return {code: RES.OK, msg: {MatchPlayer: false}}
+    }
+    /**
+     * 玩家退出房间
+     * @param player 
+     */
+    playerQuitRoom(player: AreaPlayer) {
+        if(!player.roomId) {
+            return false;
+        }
+        let room = this.roomList[player.roomId];
+        if(!room) {
+            return false;
+        }
+        room.playerQuit(player);
     }
 
     /**
@@ -83,6 +108,9 @@ export class ChatHandler {
     allocRoomToMatchPlayer(areaId: number) {
         for(let key in this.matchPlayerList) {
             let player = this.matchPlayerList[key];
+            if(player.roomId) {
+                continue;
+            }
             let room = this.doSearchRoom(areaId);
             if(player && room) {
                 room.playerEnter(player);
@@ -117,7 +145,22 @@ export class ChatHandler {
     doAllocRoom(roomId: string, areaId: number) {
         let room = new AreaRoom(areaId, roomId);    // 有可能报错, 无areaId 玩家强行登入
         room.initConfig(roomConfig.maxNum, roomConfig.minChip, roomConfig.betChip);               // 测试数据, 正式数据应当写在json文件中
+        this.roomList[roomId] = room;
         return room;
+    }
+    /**
+     * 删除一个房间
+     */
+    doDeleteRoom(roomId: string, areaId: number) {
+        let room = this.roomList[roomId];
+        if(!room) {    // 没有这个房间
+            return false;
+        }
+        if(!room.clearRoom()) {
+            return false;
+        }
+
+
     }
 
     /**
@@ -138,7 +181,11 @@ export class ChatHandler {
      * 进入游戏区间
      */
     async entryArea(msg: {areaId: number}, session: BackendSession) {
-        let player = await this.allocPlayer(session.uid);
+        let openId = session.uid;
+        if(!openId) {
+            return {code: RES.ERR_NOT_LOGIN, msg: null};
+        }
+        let player = await this.allocPlayer(openId);
         if(!player) {
             return {code: RES.ERR_NOT_OPENID, msg: null}
         }
