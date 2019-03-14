@@ -2398,3 +2398,411 @@ gate.gateHandler.queryEntry
 [2019-03-12T19:20:39.780] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
 [2019-03-12T19:20:40.602] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 11316
 [2019-03-12T19:20:40.602] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 2,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo9,reason:{}
+[2019-03-12T22:41:13.723] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T22:41:13.791] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T22:41:13.794] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:41:13.838] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T22:41:13.956] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:41:13.967] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T22:41:13.968] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 217 ms
+[2019-03-12T22:41:13.983] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":9544}}
+[2019-03-12T22:41:14.174] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T22:41:29.035] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T22:41:29.162] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T22:41:29.165] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:41:29.792] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:41:30.215] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 2
+[2019-03-12T22:41:30.238] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo9
+[2019-03-12T22:41:30.242] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T22:41:30.439] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T22:41:32.094] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:41:32.272] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T22:41:32.274] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:41:32.275] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:41:33.607] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T22:41:33.760] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, sids: [2]
+[2019-03-12T22:41:33.761] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, receivers: [2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:41:33.762] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1,2]
+[2019-03-12T22:41:33.763] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1,2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:41:35.018] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:41:37.125] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T22:45:22.332] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 5824
+[2019-03-12T22:45:22.333] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 2,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo9,reason:{}
+[2019-03-12T22:45:22.498] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:1001
+[2019-03-12T22:45:59.355] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T22:45:59.467] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T22:45:59.468] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:45:59.519] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T22:45:59.698] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:45:59.713] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T22:45:59.717] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 324 ms
+[2019-03-12T22:45:59.869] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T22:46:00.811] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T22:46:00.857] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T22:46:00.860] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:01.332] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:01.850] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 2
+[2019-03-12T22:46:01.866] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo9
+[2019-03-12T22:46:01.869] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T22:46:02.037] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T22:46:04.645] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:04.798] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T22:46:04.801] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:46:04.802] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:46:07.091] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T22:46:07.287] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, sids: [2]
+[2019-03-12T22:46:07.289] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, receivers: [2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:46:07.290] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1,2]
+[2019-03-12T22:46:07.290] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1,2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:46:09.045] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:18.460] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 5, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:23.486] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 6, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:30.931] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 6129
+[2019-03-12T22:46:30.934] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 2,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo9,reason:{}
+[2019-03-12T22:46:32.275] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 6124
+[2019-03-12T22:46:32.275] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
+[2019-03-12T22:46:36.857] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T22:46:36.906] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T22:46:36.908] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:46:36.929] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T22:46:37.023] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:46:37.031] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T22:46:37.032] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 147 ms
+[2019-03-12T22:46:37.173] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":5716}}
+[2019-03-12T22:46:37.362] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T22:46:40.799] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T22:46:40.955] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T22:46:40.957] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:41.339] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:42.883] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:43.320] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T22:46:43.322] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:46:43.323] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:46:56.108] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:57.250] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 5, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:46:59.424] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 6, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:47:01.293] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 6180
+[2019-03-12T22:47:01.294] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
+[2019-03-12T22:47:05.724] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T22:47:05.757] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T22:47:05.759] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:47:05.779] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T22:47:05.932] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:47:05.945] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T22:47:05.946] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 213 ms
+[2019-03-12T22:47:06.005] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":12036}}
+[2019-03-12T22:47:06.128] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T22:47:07.455] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T22:47:07.506] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T22:47:07.507] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:47:07.791] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:47:34.982] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:47:35.292] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T22:47:35.294] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:47:35.295] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:47:44.321] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:49:50.094] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 6217
+[2019-03-12T22:49:50.096] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
+[2019-03-12T22:50:04.995] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T22:50:05.033] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T22:50:05.034] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:50:05.099] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T22:50:05.192] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:50:05.199] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T22:50:05.205] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 201 ms
+[2019-03-12T22:50:05.366] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"chat-server-1","host":"127.0.0.1","port":6150,"args":"--inspect=10002","serverType":"chat","remoterPaths":[{"namespace":"sys","serverType":"chat","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\backend"},{"namespace":"user","serverType":"chat","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\remote"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\handler"],"pid":11604}}
+[2019-03-12T22:50:05.533] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T22:50:11.084] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T22:50:11.130] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T22:50:11.133] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:50:11.398] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:50:13.181] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:50:13.392] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T22:50:13.393] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:50:13.394] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:50:14.245] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:33.049] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T22:52:33.075] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T22:52:33.077] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:52:33.092] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T22:52:33.216] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:52:33.225] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T22:52:33.226] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 167 ms
+[2019-03-12T22:52:33.359] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"chat-server-1","host":"127.0.0.1","port":6150,"args":"--inspect=10002","serverType":"chat","remoterPaths":[{"namespace":"sys","serverType":"chat","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\backend"},{"namespace":"user","serverType":"chat","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\remote"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\handler"],"pid":8800}}
+[2019-03-12T22:52:33.822] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":11300}}
+[2019-03-12T22:52:34.050] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T22:52:36.378] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T22:52:36.403] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T22:52:36.406] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:36.680] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:38.023] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:38.170] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T22:52:38.172] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:52:38.176] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:40.066] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, sids: [1]
+[2019-03-12T22:52:40.067] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerQuitRoom, msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:40.069] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:42.395] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 5, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:42.658] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:52:42.659] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:43.733] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, sids: [1]
+[2019-03-12T22:52:43.734] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerQuitRoom, msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:43.736] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 6, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:44.548] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 7, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:44.660] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:52:44.661] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:45.449] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, sids: [1]
+[2019-03-12T22:52:45.450] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerQuitRoom, msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:45.451] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 8, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:46.496] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 9, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:46.660] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:52:46.661] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:47.129] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, sids: [1]
+[2019-03-12T22:52:47.130] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerQuitRoom, msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:52:47.131] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 10, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:52:49.167] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 6581
+[2019-03-12T22:52:49.168] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
+[2019-03-12T22:55:52.319] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T22:55:52.359] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T22:55:52.361] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:55:52.380] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T22:55:52.506] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T22:55:52.512] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T22:55:52.513] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 180 ms
+[2019-03-12T22:55:52.832] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"chat-server-1","host":"127.0.0.1","port":6150,"args":"--inspect=10002","serverType":"chat","remoterPaths":[{"namespace":"sys","serverType":"chat","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\node_modules\\pinus\\dist\\lib\\common\\remote\\backend"},{"namespace":"user","serverType":"chat","path":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\remote"}],"handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\chat\\handler"],"pid":11816}}
+[2019-03-12T22:55:53.077] [DEBUG] pinus - [connector-server-1 monitorwatcher.js] [connector-server-1] receive addServer signal: {"action":"addServer","server":{"main":"C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app.js","env":"development","id":"gate-server-1","host":"127.0.0.1","clientPort":3014,"frontend":"true","args":"--inspect=10003","serverType":"gate","handlerPaths":["C:\\Program Files\\nodejs\\websocket-chat-ts-run\\game-server\\dist\\app\\servers\\gate\\handler"],"pid":12196}}
+[2019-03-12T22:55:53.287] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T22:56:00.653] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T22:56:00.683] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T22:56:00.688] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:56:00.992] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:56:02.364] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:56:02.476] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T22:56:02.478] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:56:02.480] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:56:04.232] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, sids: [1]
+[2019-03-12T22:56:04.233] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerQuitRoom, msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:56:04.236] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:56:05.290] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 5, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:56:05.468] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:56:05.469] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:56:07.346] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, sids: [1]
+[2019-03-12T22:56:07.346] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerQuitRoom, msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:56:07.348] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 6, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:56:07.960] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 7, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T22:56:07.969] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T22:56:07.970] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T22:56:30.583] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 6662
+[2019-03-12T22:56:30.583] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
+[2019-03-12T23:14:01.616] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-12T23:14:01.646] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-12T23:14:01.648] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T23:14:01.681] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-12T23:14:01.918] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-12T23:14:01.927] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-12T23:14:01.929] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 302 ms
+[2019-03-12T23:14:02.092] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-12T23:14:16.964] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-12T23:14:17.043] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-12T23:14:17.048] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T23:14:17.433] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T23:14:17.643] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 2
+[2019-03-12T23:14:17.666] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo9
+[2019-03-12T23:14:17.670] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T23:14:17.916] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T23:14:19.064] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-12T23:14:19.412] [INFO] logger - [connector-server-1 console] connected
+[2019-03-12T23:14:19.415] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-12T23:14:19.416] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T23:14:21.033] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [2], opts: {"type":"response"}
+[2019-03-12T23:14:21.407] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, sids: [2]
+[2019-03-12T23:14:21.409] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, receivers: [2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T23:14:21.410] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1,2]
+[2019-03-12T23:14:21.411] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1,2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T23:14:21.413] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"waitTime":3}, sids: [1,2]
+[2019-03-12T23:14:21.414] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onGameCanStart, msg: {"waitTime":3}, receivers: [1,2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-12T23:14:30.393] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 7240
+[2019-03-12T23:14:30.394] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
+[2019-03-12T23:14:32.519] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 7245
+[2019-03-12T23:14:32.519] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 2,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo9,reason:{}
+[2019-03-13T17:29:57.380] [INFO] pinus - [connector-server-1 application.js] application inited: "connector-server-1"
+[2019-03-13T17:29:57.409] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter before start...
+[2019-03-13T17:29:57.411] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-13T17:29:57.429] [INFO] pinus-admin - [connector-server-1 consoleService.js] try to connect master: "connector", "127.0.0.1", 3005
+[2019-03-13T17:29:57.531] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" enter after start...
+[2019-03-13T17:29:57.537] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" finish start
+[2019-03-13T17:29:57.538] [INFO] pinus - [connector-server-1 application.js] "connector-server-1" startup in 147 ms
+[2019-03-13T17:29:57.645] [WARN] logger - [connector-server-1 console] after start all server, use route dictionary :
+ chat.chatHandler.addMatchOnlinePlayer
+chat.chatHandler.allocPlayer
+chat.chatHandler.allocRoomToMatchPlayer
+chat.chatHandler.doAllocRoom
+chat.chatHandler.doDeleteRoom
+chat.chatHandler.doSearchRoom
+chat.chatHandler.entryArea
+chat.chatHandler.getRandomRoomId
+chat.chatHandler.playerQuitRoom
+chat.chatHandler.removeMatchOnlinePlayer
+chat.chatHandler.send
+connector.entryHandler.enter
+connector.entryHandler.onUserLeave
+gate.gateHandler.getWxOpenid
+gate.gateHandler.loginByOpenid
+gate.gateHandler.queryEntry
+[2019-03-13T17:30:06.178] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 1
+[2019-03-13T17:30:06.247] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo8
+[2019-03-13T17:30:06.248] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-13T17:30:06.509] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [1], opts: {"type":"response"}
+[2019-03-13T17:30:07.924] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-13T17:30:07.996] [INFO] logger - [connector-server-1 console] connected
+[2019-03-13T17:30:07.998] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-13T17:30:07.998] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-13T17:30:09.251] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, sids: [1]
+[2019-03-13T17:30:09.252] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerQuitRoom, msg: {"playerOpenId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8"}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-13T17:30:09.253] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 4, route: chat.chatHandler.removeMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":false}}, receivers: [1], opts: {"type":"response"}
+[2019-03-13T17:30:18.072] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 5, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [1], opts: {"type":"response"}
+[2019-03-13T17:30:18.512] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1]
+[2019-03-13T17:30:18.512] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-13T17:30:20.180] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] getSession session is created with session id: 2
+[2019-03-13T17:30:20.190] [DEBUG] pinus - [connector-server-1 connector.js] session on [connector-server-1] bind with uid: oKH7c4g30VXZxQ5CV3iRQo-QjNo9
+[2019-03-13T17:30:20.191] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 1, route: connector.entryHandler.enter, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-13T17:30:20.304] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 2, route: chat.chatHandler.entryArea, msg: {"code":1,"msg":{}}, receivers: [2], opts: {"type":"response"}
+[2019-03-13T17:30:21.594] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: 3, route: chat.chatHandler.addMatchOnlinePlayer, msg: {"code":1,"msg":{"MatchPlayer":true}}, receivers: [2], opts: {"type":"response"}
+[2019-03-13T17:30:22.021] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, sids: [2]
+[2019-03-13T17:30:22.022] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onPlayerEnterRoom, msg: {"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo8","nickName":"kirigayakazuto","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":0,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}, receivers: [2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-13T17:30:22.024] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, sids: [1,2]
+[2019-03-13T17:30:22.025] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onUserEnterRoom, msg: {"playerInfo":{"openId":"oKH7c4g30VXZxQ5CV3iRQo-QjNo9","nickName":"denglang","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELED8YcLTuBpUC279icN0vO8UWSUN7VrYyhPFBzibCWhwOicB7ym5NJaoLZq64KYTyRsF0CVT1zTJVoQ/132","gender":1,"chip":1000,"exp":10,"city":"Jiujiang","country":"China","province":"Jiangxi","can_login":1}}, receivers: [1,2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-13T17:30:22.027] [DEBUG] pinus - [connector-server-1 channelRemote.js] [connector-server-1] pushMessage uids: ["oKH7c4g30VXZxQ5CV3iRQo-QjNo8","oKH7c4g30VXZxQ5CV3iRQo-QjNo9"], msg: {"waitTime":2}, sids: [1,2]
+[2019-03-13T17:30:22.027] [DEBUG] pinus - [connector-server-1 connector.js] [connector-server-1] send message reqId: null, route: onGameCanStart, msg: {"waitTime":2}, receivers: [1,2], opts: {"type":"push","userOptions":{},"isPush":true}
+[2019-03-13T17:30:33.931] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 36411
+[2019-03-13T17:30:33.934] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 1,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo8,reason:{}
+[2019-03-13T17:30:35.309] [DEBUG] pinus - [connector-server-1 switcher.js] connection error:read ECONNRESET, the remote ip is ::ffff:127.0.0.1 && port is 36436
+[2019-03-13T17:30:35.309] [DEBUG] pinus - [connector-server-1 sessionService.js] session on [connector-server-1] is closed with session id: 2,uid:oKH7c4g30VXZxQ5CV3iRQo-QjNo9,reason:{}

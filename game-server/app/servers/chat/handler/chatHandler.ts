@@ -50,7 +50,7 @@ export class ChatHandler {
             return {code: RES.ERR_PARAM, msg: null}
         }
 
-        if(this.matchPlayerList[openId]) {
+        if(this.matchPlayerList[openId]) {      //玩家已经在匹配列表
             return {code: RES.ERR_IS_IN_MASTH_LIST, msg: null}
         }
 
@@ -76,7 +76,7 @@ export class ChatHandler {
             return {code: RES.ERR_NOT_IN_MASTH_LIST, msg: null}
         }
         
-        if(!player.roomId) {  // 判断这个玩家是否已经进入了房间
+        if(player.roomId) {  // 判断这个玩家是否已经进入了房间
             this.playerQuitRoom(player);
         }
 
@@ -90,12 +90,9 @@ export class ChatHandler {
      * @param player 
      */
     playerQuitRoom(player: AreaPlayer) {
-        if(!player.roomId) {
-            return false;
-        }
         let room = this.roomList[player.roomId];
         if(!room) {
-            return false;
+            return ;
         }
         room.playerQuit(player);
     }

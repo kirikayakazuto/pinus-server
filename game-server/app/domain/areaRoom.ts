@@ -2,6 +2,7 @@ import { Channel, pinus } from "pinus";
 import AreaPlayer from "./areaPlayer";
 import RES from "../RES";
 import EventName from "../EventName";
+import { Status } from "../gameInterface";
 
 /**
  * 游戏房间
@@ -21,6 +22,8 @@ export default class AreaRoom {
     currentPlayerNum = 0;                 // 房间当前玩家数目
 
     channel: Channel = null;    // 通道, 用于接收, 发送信息
+
+    status = Status.NotEnoughPlayers;      // 房间的状态
 
     /**
      * 初始化房间参数
@@ -96,7 +99,6 @@ export default class AreaRoom {
             this.getChannel().__channelService__.pushMessageByUids(EventName.onPlayerEnterRoom, this.playerList[i].playerInfo, [{uid: player.openId, sid: player.serverId}])
         }
         
-
         if(!this.playerSitdown(player)) {          // 玩家坐下
             return {code: RES.ERR_PARAM, msg: null}
         }   
@@ -110,8 +112,61 @@ export default class AreaRoom {
             }
         );
 
+        // 检验是否可以开始游戏了
+        this.checkGameCanStart();
         return {code: RES.OK, msg: {}}
     }
+    /**
+     * 检查游戏是否可以开始                                             ------------- 将玩家中匹配列表中删除, 因为此时玩家不能再推出匹配列表
+     */
+    checkGameCanStart() {
+        if(this.currentPlayerNum == this.maxNum) {
+            this.status = Status.CanStartGame;
+            this.getChannel().pushMessage(
+                EventName.onGameCanStart,
+                {
+                    waitTime: 2,    // 等待玩家进入游戏场景
+                }
+            );
+        }
+    }
+    /**
+     * 玩家可以开始, 准备工作
+     */
+    doGameCanStart() {
+        // 清除
+    }
+
+    /**
+     * 玩家离开房间
+     * @param player 
+     */
+    playerQuit(player: AreaPlayer) {
+        
+        if(player.seatId == -1) {
+            return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
+        }
+        if(!this.playerList[player.seatId]) {
+            return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
+        }
+        
+        this.getChannel().pushMessage(
+            EventName.onPlayerQuitRoom,
+            {
+                playerOpenId: player.openId,
+            }
+        );
+
+        this.getChannel().leave(player.openId, player.serverId);
+
+        this.playerStandup(player);
+
+        this.currentPlayerNum --;
+        player.quitRoom();
+
+        return {code: RES.OK, msg: {}}
+    }
+
     /**
      * 玩家坐下
      */
@@ -146,33 +201,7 @@ export default class AreaRoom {
         player.standUp();
         return true;
     }
-    /**
-     * 玩家离开房间
-     * @param player 
-     */
-    playerQuit(player: AreaPlayer) {
-        if(player.seatId == -1) {
-            return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
-        }
-        if(!this.playerList[player.seatId]) {
-            return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
-        }
-
-        this.getChannel().leave(player.openId, player.serverId);
-        this.getChannel().pushMessage(
-            EventName.onPlayerQuitRoom,
-            {
-                playerOpenId: player.openId,
-            }
-        );
-
-        this.playerStandup(player);
-
-        this.currentPlayerNum --;
-        player.quitRoom();
-
-        return {code: RES.OK, msg: {}}
-    }
+    
     /**
      * 添加事件
      */

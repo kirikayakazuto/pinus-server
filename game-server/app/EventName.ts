@@ -8,4 +8,6 @@ export default class EventName {
     static onUserQuitRoom = "onUserQuitRoom";
     static onPlayerQuitRoom = "onPlayerQuitRoom";
     static onPlayerEnterRoom = "onPlayerEnterRoom";
+
+    static onGameCanStart = "onGameCanStart";
 }

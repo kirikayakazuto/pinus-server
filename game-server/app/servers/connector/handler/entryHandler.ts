@@ -19,9 +19,6 @@ export class EntryHandler {
 
     onlinePlayerList: {[openId: string]: FrontendSession} = {};     // 在线玩家列表
 
-    matchPlayerList: {[openId: string]: FrontendSession} = {};      // 开启匹配玩家列表
-
-
     /**
      * 玩家进入connector服务器
      *
@@ -57,11 +54,6 @@ export class EntryHandler {
         }
     }
     
-
-    
-
-    
-
     /**
      * User log out handler
      *
@@ -72,12 +64,6 @@ export class EntryHandler {
     onUserLeave(session: FrontendSession) {
         if (!session || !session.uid) {
             return;
-        }
-
-        // 退出匹配列表
-        if(this.matchPlayerList[session.uid]) {
-            this.matchPlayerList[session.uid] = null;
-            delete this.matchPlayerList[session.uid];    
         }
 
         this.onlinePlayerList[session.uid] = null;
