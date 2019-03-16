@@ -6,6 +6,7 @@ import AreaPlayer from '../../../domain/areaPlayer';
 import AreaRoom from '../../../domain/areaRoom';
 import GameConfig from '../../../gameConfig';
 import utils from '../../../util/utils';
+import { isDate } from 'util';
 
 const roomConfig = GameConfig.roomConfig;
 
@@ -71,19 +72,43 @@ export class ChatHandler {
             return {code: RES.ERR_NOT_LOGIN, msg: null};
         }
         
-        let player = this.matchPlayerList[openId];
+        let player = this.onlinePlayerList[openId];
         if(!player) {
             return {code: RES.ERR_NOT_IN_MASTH_LIST, msg: null}
         }
         
         if(player.roomId) {  // 判断这个玩家是否已经进入了房间
             this.playerQuitRoom(player);
+        }else {
+            this.removePlayerFromMatchList(player);
+        }
+        return {code: RES.OK, msg: {MatchPlayer: false}}
+    }
+
+    /**
+     * 玩家进入游戏场景
+     * @param msg 
+     * @param session 
+     */
+    async enterGameScene(msg: {press: number}, session: BackendSession) {
+        if(!msg) {
+            return {code: RES.ERR_SYSTEM, msg: null};
+        }
+        let openId = session.uid;
+
+        let player = this.onlinePlayerList[openId];
+        if(!player) {
+            return {code: RES.ERR_SYSTEM, msg: null};
         }
 
-        this.matchPlayerList[openId] = null;
-        delete this.matchPlayerList[openId];
+        let room = this.roomList[player.roomId];
+        if(!room) {
+            return {code: RES.ERR_SYSTEM, msg: null};
+        }
 
-        return {code: RES.OK, msg: {MatchPlayer: false}}
+        room.enterGameScene(player);
+
+        return {code: RES.OK, msg: {}};
     }
     /**
      * 玩家退出房间
@@ -111,8 +136,19 @@ export class ChatHandler {
             let room = this.doSearchRoom(areaId);
             if(player && room) {
                 room.playerEnter(player);
+                this.removePlayerFromMatchList(player);
             }
         }
+    }
+    /**
+     * 从匹配列表删除玩家
+     */
+    removePlayerFromMatchList(player: AreaPlayer) {
+        if(!this.matchPlayerList[player.openId]) {
+            return ;
+        }
+        this.matchPlayerList[player.openId] = null;
+        delete this.matchPlayerList[player.openId];
     }
     /**
      * 获取一个随机字符串作为房间ID
@@ -156,10 +192,8 @@ export class ChatHandler {
         if(!room.clearRoom()) {
             return false;
         }
-
-
+        return true;
     }
-
     /**
      * 分配一个玩家
      */
@@ -172,6 +206,14 @@ export class ChatHandler {
         player.initInfo(playerInfo[0]);
         
         return player;
+    }
+    /**
+     * 玩家移动
+     * @param msg 
+     * @param session 
+     */
+    async move(msg: {areaId: number}, session: BackendSession) {
+
     }
 
     /**
@@ -206,29 +248,7 @@ export class ChatHandler {
      *
      */
     async send(msg: {content: string , target: string}, session: BackendSession) {
-        /* let rid = session.get('rid');
-        let username = session.uid.split('*')[0];
-        let channelService = this.app.get('channelService');
-        let param = {
-            msg: msg.content,
-            from: username,
-            target: msg.target
-        };
-        let channel = channelService.getChannel(rid, false);
-
-        // the target is all users
-        if (msg.target === '*') {
-            channel.pushMessage('onChat', param);
-        }
-        // the target is specific user
-        else {
-            let tuid = msg.target + '*' + rid;
-            let tsid = channel.getMember(tuid)['sid'];
-            channelService.pushMessageByUids('onChat', param, [{
-                uid: tuid,
-                sid: tsid
-            }]);
-        } */
+        
     }
 }
 

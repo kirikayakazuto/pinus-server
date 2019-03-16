@@ -1,4 +1,4 @@
-import { UserInfo } from "../gameInterface";
+import { UserInfo, Status } from "../gameInterface";
 import { Session } from "pinus";
 import {EventEmitter} from "events"
 
@@ -12,6 +12,7 @@ export default class AreaPlayer {
     areaId = -1;                    // 区间号
     roomId: string = null;                    // 房间号
     seatId = -1;                    // 座位号
+    state: number = Status.InView;   // 玩家状态
 
     eventEmitter: EventEmitter = new EventEmitter();    // 事件监听, 发送
 

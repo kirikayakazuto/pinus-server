@@ -10,4 +10,7 @@ export default class EventName {
     static onPlayerEnterRoom = "onPlayerEnterRoom";
 
     static onGameCanStart = "onGameCanStart";
+
+    static onWaitGameStart = "onWaitGameStart";
+    static onGameStart = "onGameStart";
 }

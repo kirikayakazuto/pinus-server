@@ -3,6 +3,8 @@ import AreaPlayer from "./areaPlayer";
 import RES from "../RES";
 import EventName from "../EventName";
 import { Status } from "../gameInterface";
+import ActionManagerService from "../service/actionManagerService";
+import Action from "../service/Action";
 
 /**
  * 游戏房间
@@ -17,13 +19,16 @@ export default class AreaRoom {
     maxNum = 2;                 // 房间最大人数
     // playerList: {[openId: string]: AreaPlayer} = {};
     playerList: Array<AreaPlayer> = [null, null];
-    actionManagerService: any = null;
+    actionManagerService: ActionManagerService = null;
 
     currentPlayerNum = 0;                 // 房间当前玩家数目
+    readyNum = 0;                           // 准备好的玩家数目
 
-    channel: Channel = null;    // 通道, 用于接收, 发送信息
+    channel: Channel = null;                // 通道, 用于接收, 发送信息
 
     status = Status.NotEnoughPlayers;      // 房间的状态
+
+    
 
     /**
      * 初始化房间参数
@@ -43,12 +48,14 @@ export default class AreaRoom {
         this.minChip = minChip;
         this.betChip = betChip;
     }
-    
     /**
-     * 开始执行游戏进程
+     * 添加事件
      */
-    run() {
+    addEvent(player: AreaPlayer) {
+        let self = this;
+        player.eventEmitter.on("good", () => {
 
+        })
     }
     /**
      * 清理房间
@@ -63,6 +70,83 @@ export default class AreaRoom {
         this.getChannel().destroy();
         return true;
     }
+
+    /**
+     * --------------------- 游戏开始后 ------------------------
+     */
+    checkGameCanStart() {
+        if(this.currentPlayerNum == this.maxNum) {
+            this.status = Status.CanStartGame;      // 改变房间的状态
+            this.getChannel().pushMessage(
+                EventName.onGameCanStart,
+                {
+                    waitTime: 2,                    // 等待玩家进入游戏场景
+                }
+            );
+        }
+    }
+    /**
+     * 进入游戏场景
+     */
+    enterGameScene(player: AreaPlayer) {
+        if(player.seatId == -1) {
+            return false;
+        }
+        if(player.state == Status.InView) {
+            this.readyNum ++;
+            player.state = Status.Ready;
+        }
+
+        if(this.readyNum == this.maxNum) {
+            // 游戏正式开始
+            this.getChannel().pushMessage(
+                EventName.onWaitGameStart, 
+                {
+                    waitTime: 3,
+                }
+            );
+            setTimeout(this.run.bind(this), 3000);
+        }
+        return true;
+    }
+    /**
+     * 游戏开始了
+     */
+    run() {
+        this.getChannel().pushMessage(
+            EventName.onGameStart, 
+            {
+                
+            }
+        );
+        // 启动动作管理系统
+        this.actionManagerService = new ActionManagerService(this.areaId, this.roomId);
+        setInterval(this.tick, 100);
+    }
+    tick() {
+        this.actionManagerService.update();
+    }
+    /**
+     * 
+     * @param action 添加一个动作
+     */
+    addAction(action: Action) {
+        this.actionManagerService.addAction(action);
+    }
+    /**
+     * 停止一个动作
+     * @param type 
+     * @param id 
+     */
+    abortAction(type: string, id: number) {
+        this.actionManagerService.abortAction(type, id);
+    }
+    /**
+     * 停止某个玩家所有的动作
+     */
+    abortAllAction(id: number) {
+        this.actionManagerService.abortAllAction(id);
+    }
     /**
      * 获取通道
      * 有就返回, 没有就新建一个
@@ -74,6 +158,20 @@ export default class AreaRoom {
         this.channel = pinus.app.get('channelService').getChannel('area_room_' + this.roomId, true);       // true表示没有就会新建
         return this.channel;
     }
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * --------------------- 游戏开始前   进入房间 退出房间, 玩家坐下, 玩家站起 ---------------------
+     */
     /**
      * 玩家进入
      * step1 玩家进入房间
@@ -117,32 +215,10 @@ export default class AreaRoom {
         return {code: RES.OK, msg: {}}
     }
     /**
-     * 检查游戏是否可以开始                                             ------------- 将玩家中匹配列表中删除, 因为此时玩家不能再推出匹配列表
-     */
-    checkGameCanStart() {
-        if(this.currentPlayerNum == this.maxNum) {
-            this.status = Status.CanStartGame;
-            this.getChannel().pushMessage(
-                EventName.onGameCanStart,
-                {
-                    waitTime: 2,    // 等待玩家进入游戏场景
-                }
-            );
-        }
-    }
-    /**
-     * 玩家可以开始, 准备工作
-     */
-    doGameCanStart() {
-        // 清除
-    }
-
-    /**
      * 玩家离开房间
      * @param player 
      */
     playerQuit(player: AreaPlayer) {
-        
         if(player.seatId == -1) {
             return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
         }
@@ -166,19 +242,6 @@ export default class AreaRoom {
 
         return {code: RES.OK, msg: {}}
     }
-
-    /**
-     * 玩家坐下
-     */
-    playerSitdown(player: AreaPlayer) {
-        let seatId = this.doSearchEmptySeat();
-        if(seatId == -1) {
-            return false;
-        }
-        this.playerList[seatId] = player;
-        player.sitDown(seatId);
-        return true;
-    }
     /**
      * 寻找一个位子
      */
@@ -191,6 +254,19 @@ export default class AreaRoom {
         return -1;
     }
     /**
+     * 玩家坐下
+     */
+    playerSitdown(player: AreaPlayer) {
+        let seatId = this.doSearchEmptySeat();
+        if(seatId == -1) {
+            return false;
+        }
+        this.playerList[seatId] = player;
+        player.sitDown(seatId);
+        return true;
+    }
+    
+    /**
      * 玩家站起
      */
     playerStandup(player: AreaPlayer) {
@@ -201,15 +277,15 @@ export default class AreaRoom {
         player.standUp();
         return true;
     }
-    
-    /**
-     * 添加事件
-     */
-    addEvent(player: AreaPlayer) {
-        let self = this;
-        player.eventEmitter.on("good", () => {
 
-        })
+    /**
+     * ------------------------------------ 工具方法 ------------------------------------
+     */
+    getPlayerBySeatId(seatId: number) {
+        return this.playerList[seatId];
+    }
+    getAllPlayers() {
+        return this.playerList;
     }
 
 
