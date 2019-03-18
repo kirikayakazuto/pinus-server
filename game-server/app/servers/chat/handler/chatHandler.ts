@@ -110,6 +110,31 @@ export class ChatHandler {
 
         return {code: RES.OK, msg: {}};
     }
+
+    async playerMove(msg: {cmd: number, data: {turn: number, speed: number}}, session: BackendSession) {
+        let openId = session.uid;
+        if(!openId) {
+            return {code: RES.ERR_SYSTEM, msg: null}
+        }
+
+        let player = this.onlinePlayerList[openId];
+        if(!player) {
+            return {code: RES.ERR_SYSTEM, msg: null}
+        }
+
+        if(player.roomId == "" || player.seatId == -1) {
+            return {code: RES.ERR_SYSTEM, msg: null}
+        }
+
+        let room = this.roomList[player.roomId];
+        if(!room) {
+            return {code: RES.ERR_SYSTEM, msg: null}
+        }
+
+        room.addAction(msg, player.seatId);
+
+        return {code: RES.OK, msg: {}}
+    }
     /**
      * 玩家退出房间
      * @param player 

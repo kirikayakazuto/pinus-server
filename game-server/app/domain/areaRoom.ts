@@ -3,8 +3,10 @@ import AreaPlayer from "./areaPlayer";
 import RES from "../RES";
 import EventName from "../EventName";
 import { Status } from "../gameInterface";
-import ActionManagerService from "../service/actionManagerService";
-import Action from "../service/Action";
+import Action, { ActionPool } from "../service/Action";
+import Queue from "../util/Queue"
+import FrameData from "../service/FrameData";
+
 
 /**
  * 游戏房间
@@ -17,18 +19,27 @@ export default class AreaRoom {
     betChip = 100;              // 没把所需的金币数目
 
     maxNum = 2;                 // 房间最大人数
-    // playerList: {[openId: string]: AreaPlayer} = {};
     playerList: Array<AreaPlayer> = [null, null];
-    actionManagerService: ActionManagerService = null;
 
-    currentPlayerNum = 0;                 // 房间当前玩家数目
+    currentPlayerNum = 0;                   // 房间当前玩家数目
     readyNum = 0;                           // 准备好的玩家数目
 
     channel: Channel = null;                // 通道, 用于接收, 发送信息
 
     status = Status.NotEnoughPlayers;      // 房间的状态
 
-    
+    currentFrameCount = 0;                  // 当前的帧数
+
+    allActionMap: {[key: number]: any} = {};            // 历史命令
+
+    serverFrameInterval = 100;                          // 帧频率 单位ms
+    serverTimeout = 15000;                              // 掉线
+    useLocal = false;                                   // 是否使用ai
+
+    actionPool: ActionPool = null;                      // 对象池
+    actionQueue: Queue<Action> = null;                 // 动作指令队列, 先进先出, 每帧收到的最大action数目为5
+    frameData: FrameData = null;                        // 每一帧发出的数据, 封装类
+
 
     /**
      * 初始化房间参数
@@ -47,15 +58,10 @@ export default class AreaRoom {
         this.maxNum = maxNum;
         this.minChip = minChip;
         this.betChip = betChip;
-    }
-    /**
-     * 添加事件
-     */
-    addEvent(player: AreaPlayer) {
-        let self = this;
-        player.eventEmitter.on("good", () => {
 
-        })
+        this.actionPool = new ActionPool(5);
+        this.frameData = new FrameData();
+        this.actionQueue = new Queue<Action>(100);
     }
     /**
      * 清理房间
@@ -68,6 +74,10 @@ export default class AreaRoom {
             }
         }
         this.getChannel().destroy();
+        this.playerList = null;
+        this.actionPool = null;
+        this.frameData = null;
+        this.actionQueue = null;
         return true;
     }
 
@@ -98,11 +108,19 @@ export default class AreaRoom {
         }
 
         if(this.readyNum == this.maxNum) {
+            let playerInfoList = [];
+            for(let i=0; i<this.playerList.length; i++) {
+                playerInfoList.push({
+                    seatId: this.playerList[i].seatId,
+                    playerInfo: this.playerList[i].playerInfo
+                });
+            }
             // 游戏正式开始
             this.getChannel().pushMessage(
                 EventName.onWaitGameStart, 
                 {
                     waitTime: 3,
+                    playerInfoList: playerInfoList,
                 }
             );
             setTimeout(this.run.bind(this), 3000);
@@ -119,33 +137,45 @@ export default class AreaRoom {
                 
             }
         );
-        // 启动动作管理系统
-        this.actionManagerService = new ActionManagerService(this.areaId, this.roomId);
-        setInterval(this.tick, 100);
+        setInterval(this.tick.bind(this), this.serverFrameInterval);
     }
+    /**
+     * 应为该方法会被频繁调用, 所以需要尽量优化, 不要new
+     */
     tick() {
-        this.actionManagerService.update();
+        this.currentFrameCount ++;
+        this.broadcastAction();
+    }
+    /**
+     * 广播当前帧的命令
+     */
+    broadcastAction() {
+        this.frameData.setCurFrame(this.currentFrameCount);
+        let action = null;
+        while(1) {
+            action = this.actionQueue.pop();
+            if(!action) {
+                break;
+            }
+            this.frameData.setAction(action);
+        }
+
+        this.getChannel().pushMessage(
+            EventName.onFrameEvent, 
+            this.frameData
+        );
+
+        this.frameData.clearActionList();
     }
     /**
      * 
      * @param action 添加一个动作
      */
-    addAction(action: Action) {
-        this.actionManagerService.addAction(action);
-    }
-    /**
-     * 停止一个动作
-     * @param type 
-     * @param id 
-     */
-    abortAction(type: string, id: number) {
-        this.actionManagerService.abortAction(type, id);
-    }
-    /**
-     * 停止某个玩家所有的动作
-     */
-    abortAllAction(id: number) {
-        this.actionManagerService.abortAllAction(id);
+    addAction(msg: {cmd: number, data: {turn: number, speed: number}}, seatId: number) {
+        let action = this.actionPool.create();
+        action.setSeatId(seatId);
+        action.setCmdAndData(msg.cmd, msg.data);
+        this.actionQueue.push(action);
     }
     /**
      * 获取通道
@@ -158,12 +188,6 @@ export default class AreaRoom {
         this.channel = pinus.app.get('channelService').getChannel('area_room_' + this.roomId, true);       // true表示没有就会新建
         return this.channel;
     }
-
-
-
-
-
-
 
 
 

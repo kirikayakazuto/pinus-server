@@ -1,6 +1,5 @@
 import { Channel } from "pinus";
 import Consts from "../consts/consts";
-import actionManagerService from "./actionManagerService";
 import AreaPlayer from "../domain/areaPlayer";
 
 export default class AreaService {
@@ -12,7 +11,7 @@ export default class AreaService {
     playerList: {[openId: string]: AreaPlayer} = {};    // 玩家列表
     entities = {};
     channel: Channel = null;
-    actionManagerService: actionManagerService = null;
+
     consts: Consts = null;
 
     /**

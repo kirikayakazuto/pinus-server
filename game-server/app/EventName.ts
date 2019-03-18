@@ -13,4 +13,7 @@ export default class EventName {
 
     static onWaitGameStart = "onWaitGameStart";
     static onGameStart = "onGameStart";
+
+    static onFrameEvent = "onFrameEvent";
+    static onMove = "onMove";
 }
