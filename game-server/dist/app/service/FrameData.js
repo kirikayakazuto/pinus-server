@@ -8,7 +8,7 @@ class FrameData {
     setCurFrame(curFrame) {
         this.curFrame = curFrame;
     }
-    setAction(action) {
+    addAction(action) {
         this.actionList.push(action);
     }
     clearActionList() {

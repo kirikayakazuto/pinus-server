@@ -13,7 +13,7 @@ export default class FrameData {
 
     actionList: Array<Action> = [];     // 动作列表
 
-    setAction(action: Action) {
+    addAction(action: Action) {
         this.actionList.push(action);
     }
 

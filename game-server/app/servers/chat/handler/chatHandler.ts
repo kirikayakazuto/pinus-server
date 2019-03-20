@@ -7,6 +7,7 @@ import AreaRoom from '../../../domain/areaRoom';
 import GameConfig from '../../../gameConfig';
 import utils from '../../../util/utils';
 import { isDate } from 'util';
+import Action from '../../../service/Action';
 
 const roomConfig = GameConfig.roomConfig;
 
@@ -111,7 +112,7 @@ export class ChatHandler {
         return {code: RES.OK, msg: {}};
     }
 
-    async playerMove(msg: {cmd: number, data: {turn: number, speed: number}}, session: BackendSession) {
+    async ReceivedPlayerCommand(msg: Action, session: BackendSession) {
         let openId = session.uid;
         if(!openId) {
             return {code: RES.ERR_SYSTEM, msg: null}

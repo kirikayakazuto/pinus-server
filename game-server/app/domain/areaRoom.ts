@@ -152,26 +152,24 @@ export default class AreaRoom {
     broadcastAction() {
         this.frameData.setCurFrame(this.currentFrameCount);
         let action = null;
-        while(1) {
-            action = this.actionQueue.pop();
-            if(!action) {
-                break;
-            }
-            this.frameData.setAction(action);
+        while((action = this.actionQueue.pop()) != null) {
+            this.frameData.addAction(action);
         }
 
         this.getChannel().pushMessage(
             EventName.onFrameEvent, 
             this.frameData
         );
-
+        for(let action of this.frameData.actionList) {
+            this.actionPool.recover(action);
+        }
         this.frameData.clearActionList();
     }
     /**
      * 
      * @param action 添加一个动作
      */
-    addAction(msg: {cmd: number, data: {turn: number, speed: number}}, seatId: number) {
+    addAction(msg: Action, seatId: number) {
         let action = this.actionPool.create();
         action.setSeatId(seatId);
         action.setCmdAndData(msg.cmd, msg.data);
