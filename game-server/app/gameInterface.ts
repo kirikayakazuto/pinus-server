@@ -11,6 +11,18 @@ export interface UserInfo {
     can_login?: number,
 }
 
+export interface HistoryInfo {
+    selfOpenId?: string,
+    selfNickName?: string,
+    otherOpenId?: string,
+    otherNickName?: string
+    dist?: string,
+    time?: string,
+    chip?: number,
+    isWin?: number,
+    exp?: number,
+}
+
 export enum Status {
     /**
      * -----------------房间状态---------------
@@ -27,4 +39,6 @@ export enum Status {
     Ready = 6,          // 准备开始
     Playing = 7,        // 游戏进行中
     InView = 8,         // 还没准备好
+    NotInRoom = 9,     // 没有在房间内
+    OnTheSeat = 10,     // 在座位上
 }

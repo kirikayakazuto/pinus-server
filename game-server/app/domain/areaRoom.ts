@@ -6,6 +6,8 @@ import { Status } from "../gameInterface";
 import Action, { ActionPool } from "../service/Action";
 import Queue from "../util/Queue"
 import FrameData from "../service/FrameData";
+import MysqlCenter from "../database/MysqlCenter";
+import utils from "../util/utils";
 
 
 /**
@@ -40,6 +42,7 @@ export default class AreaRoom {
     actionQueue: Queue<Action> = null;                 // 动作指令队列, 先进先出, 每帧收到的最大action数目为5
     frameData: FrameData = null;                        // 每一帧发出的数据, 封装类
 
+    timer: NodeJS.Timer = null;                         // tick 的定时器
 
     /**
      * 初始化房间参数
@@ -63,134 +66,10 @@ export default class AreaRoom {
         this.frameData = new FrameData();
         this.actionQueue = new Queue<Action>(100);
     }
-    /**
-     * 清理房间
-     */
-    clearRoom() {
-        for(let key in this.playerList) {
-            let data = this.playerQuit(this.playerList[key]);;
-            if(data.code != RES.OK) {
-                return false;
-            }
-        }
-        this.getChannel().destroy();
-        this.playerList = null;
-        this.actionPool = null;
-        this.frameData = null;
-        this.actionQueue = null;
-        return true;
-    }
+    
 
-    /**
-     * --------------------- 游戏开始后 ------------------------
-     */
-    checkGameCanStart() {
-        if(this.currentPlayerNum == this.maxNum) {
-            this.status = Status.CanStartGame;      // 改变房间的状态
-            this.getChannel().pushMessage(
-                EventName.onGameCanStart,
-                {
-                    waitTime: 2,                    // 等待玩家进入游戏场景
-                }
-            );
-        }
-    }
-    /**
-     * 进入游戏场景
-     */
-    enterGameScene(player: AreaPlayer) {
-        if(player.seatId == -1) {
-            return false;
-        }
-        if(player.state == Status.InView) {
-            this.readyNum ++;
-            player.state = Status.Ready;
-        }
-
-        if(this.readyNum == this.maxNum) {
-            let playerInfoList = [];
-            for(let i=0; i<this.playerList.length; i++) {
-                playerInfoList.push({
-                    seatId: this.playerList[i].seatId,
-                    playerInfo: this.playerList[i].playerInfo
-                });
-            }
-            // 游戏正式开始
-            this.getChannel().pushMessage(
-                EventName.onWaitGameStart, 
-                {
-                    waitTime: 3,
-                    playerInfoList: playerInfoList,
-                }
-            );
-            setTimeout(this.run.bind(this), 3000);
-        }
-        return true;
-    }
-    /**
-     * 游戏开始了
-     */
-    run() {
-        this.getChannel().pushMessage(
-            EventName.onGameStart, 
-            {
-                
-            }
-        );
-        setInterval(this.tick.bind(this), this.serverFrameInterval);
-    }
-    /**
-     * 应为该方法会被频繁调用, 所以需要尽量优化, 不要new
-     */
-    tick() {
-        this.currentFrameCount ++;
-        this.broadcastAction();
-    }
-    /**
-     * 广播当前帧的命令
-     */
-    broadcastAction() {
-        this.frameData.setCurFrame(this.currentFrameCount);
-        let action = null;
-        while((action = this.actionQueue.pop()) != null) {
-            this.frameData.addAction(action);
-        }
-
-        this.getChannel().pushMessage(
-            EventName.onFrameEvent, 
-            this.frameData
-        );
-        for(let action of this.frameData.actionList) {
-            this.actionPool.recover(action);
-        }
-        this.frameData.clearActionList();
-    }
-    /**
-     * 
-     * @param action 添加一个动作
-     */
-    addAction(msg: Action, seatId: number) {
-        let action = this.actionPool.create();
-        action.setSeatId(seatId);
-        action.setCmdAndData(msg.cmd, msg.data);
-        this.actionQueue.push(action);
-    }
-    /**
-     * 获取通道
-     * 有就返回, 没有就新建一个
-     */
-    getChannel() {
-        if (this.channel) {
-            return this.channel;
-        }
-        this.channel = pinus.app.get('channelService').getChannel('area_room_' + this.roomId, true);       // true表示没有就会新建
-        return this.channel;
-    }
-
-
-
-
-
+    
+    
     /**
      * --------------------- 游戏开始前   进入房间 退出房间, 玩家坐下, 玩家站起 ---------------------
      */
@@ -248,6 +127,10 @@ export default class AreaRoom {
             return {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
         }
         
+        if(player.state == Status.Playing) {
+            return  {code: RES.ERR_PLAYER_IS_NOT_IN_ROOM, msg: null};
+        }
+        
         this.getChannel().pushMessage(
             EventName.onPlayerQuitRoom,
             {
@@ -301,6 +184,200 @@ export default class AreaRoom {
     }
 
     /**
+     * --------------------- 游戏进行中 ------------------------
+     */
+    checkGameCanStart() {
+        if(this.currentPlayerNum == this.maxNum) {
+            this.status = Status.CanStartGame;      // 改变房间的状态
+            this.getChannel().pushMessage(
+                EventName.onGameCanStart,
+                {
+                    waitTime: 2,                    // 等待玩家进入游戏场景
+                }
+            );
+        }
+    }
+    /**
+     * 
+     * @param action 添加一个动作
+     */
+    addAction(msg: Action, seatId: number) {
+        let action = this.actionPool.create();
+        action.setSeatId(seatId);
+        action.setCmdAndData(msg.cmd, msg.data);
+        this.actionQueue.push(action);
+    }
+    /**
+     * 进入游戏场景
+     */
+    enterGameScene(player: AreaPlayer) {
+        if(player.seatId == -1) {
+            return false;
+        }
+        if(player.state == Status.OnTheSeat) {
+            this.readyNum ++;
+            player.ready();
+        }
+
+        if(this.readyNum == this.maxNum) {
+            let playerInfoList = [];
+            for(let i=0; i<this.playerList.length; i++) {
+                playerInfoList.push({
+                    seatId: this.playerList[i].seatId,
+                    playerInfo: this.playerList[i].playerInfo
+                });
+            }
+            // 游戏正式开始
+            this.getChannel().pushMessage(
+                EventName.onWaitGameStart, 
+                {
+                    waitTime: 3,
+                    playerInfoList: playerInfoList,
+                }
+            );
+            // 客户端动画播放时间, 不允许游戏进行
+            setTimeout(this.run.bind(this), 3000);
+        }
+        return true;
+    }
+    /**
+     * 游戏开始了
+     */
+    run() {
+        this.getChannel().pushMessage(
+            EventName.onGameStart, 
+            {
+                
+            }
+        );
+        this.status = Status.Playing;
+        for(let player of this.playerList) {
+            player.playing();
+        }
+        this.timer = setInterval(this.tick.bind(this), this.serverFrameInterval);
+    }
+    /**
+     * 应为该方法会被频繁调用, 所以需要尽量优化, 不要new
+     */
+    tick() {
+        this.currentFrameCount ++;
+        this.broadcastAction();
+    }
+    /**
+     * 广播当前帧的命令
+     */
+    broadcastAction() {
+        // 设置frameData中的数据, 发至客户端
+        this.frameData.setCurFrame(this.currentFrameCount);
+        let action = null;
+        while((action = this.actionQueue.pop()) != null) {
+            this.frameData.addAction(action);
+        }
+
+        // push数据
+        this.getChannel().pushMessage(
+            EventName.onFrameEvent, 
+            this.frameData
+        );
+
+        // 回收frameData
+        for(let action of this.frameData.actionList) {
+            this.actionPool.recover(action);
+        }
+        this.frameData.clearActionList();
+    }
+
+    /**
+     * ----------------------------- 游戏结束后 -------------------------
+     */
+    async gameOver(msg: {isWin: number}, seatId: number) {
+        let player = this.playerList[seatId];
+        if(!player || player.isWin != 0) {
+            return ;
+        }
+        player.isWin = msg.isWin;
+
+        if(this.playerList[0].isWin + this.playerList[1].isWin == 0 && this.playerList[0].isWin != 0 && this.playerList[1].isWin != 0) {
+            let playerBody = [];
+            for(let player of this.playerList) {
+                playerBody.push({openId: player.openId, seatId: player.seatId, isWin: player.isWin});
+            }
+
+            if(this.timer != null) {
+                clearInterval(this.timer);          // 停止帧同步
+                this.timer = null;
+            }
+
+            this.getChannel().pushMessage(
+                EventName.onGameOver,
+                playerBody
+            );
+
+            await this.checkOut();              // 结算
+        }
+    }
+
+    async checkOut() {
+        // 计算每个玩家的输赢
+        let body = [];
+        for(let player of this.playerList) {
+            let chip = this.betChip * player.isWin;
+            let exp = this.betChip;
+            body.push({playerInfo: player.playerInfo, chip: chip, exp: exp});
+            await player.checkOutGame(chip, exp);
+        }
+        let playerA = this.playerList[0];
+        let playerB = this.playerList[1];
+        let df = utils.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        let strTime1 = df["format"]();
+        await MysqlCenter.insertFightHistory(playerA, playerB, strTime1, this.betChip, this.betChip, playerA.isWin, playerB.isWin, "");
+
+        this.getChannel().pushMessage(
+            EventName.onCheckGame, 
+            body
+        );
+    }
+    // 结算完毕
+    checkOutOver() {
+        // 清除房间过时信息
+        this.currentFrameCount = 0;
+        this.status = Status.NotEnoughPlayers;
+        this.allActionMap = null;
+        this.actionPool = null;
+        this.actionQueue =  null;
+        this.frameData = null;
+        this.timer = null;
+        //清除玩家信息
+        for(let player of this.playerList) {
+            this.playerQuit(player);
+        }
+        this.playerList = [];
+        this.currentPlayerNum = 0;
+    }
+
+    /**
+     * 清理房间
+     */
+    clearRoom() {
+        for(let key in this.playerList) {
+            let data = this.playerQuit(this.playerList[key]);;
+            if(data.code != RES.OK) {
+                return false;
+            }
+        }
+        this.getChannel().destroy();
+        this.playerList = null;
+        this.currentFrameCount = 0;
+        this.status = Status.NotEnoughPlayers;
+        this.allActionMap = null;
+        this.actionPool = null;
+        this.actionQueue =  null;
+        this.frameData = null;
+        this.timer = null;
+        return true;
+    }
+
+    /**
      * ------------------------------------ 工具方法 ------------------------------------
      */
     getPlayerBySeatId(seatId: number) {
@@ -308,6 +385,17 @@ export default class AreaRoom {
     }
     getAllPlayers() {
         return this.playerList;
+    }
+    /**
+     * 获取通道
+     * 有就返回, 没有就新建一个
+     */
+    getChannel() {
+        if (this.channel) {
+            return this.channel;
+        }
+        this.channel = pinus.app.get('channelService').getChannel('area_room_' + this.roomId, true);       // true表示没有就会新建
+        return this.channel;
     }
 
 

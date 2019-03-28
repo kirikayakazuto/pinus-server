@@ -16,4 +16,7 @@ export default class EventName {
 
     static onFrameEvent = "onFrameEvent";
     static onMove = "onMove";
+
+    static onGameOver = "onGameOver";
+    static onCheckGame = "onCheckGame";
 }

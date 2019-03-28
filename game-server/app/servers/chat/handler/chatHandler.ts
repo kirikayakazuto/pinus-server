@@ -8,6 +8,7 @@ import GameConfig from '../../../gameConfig';
 import utils from '../../../util/utils';
 import { isDate } from 'util';
 import Action from '../../../service/Action';
+import { Status } from '../../../gameInterface';
 
 const roomConfig = GameConfig.roomConfig;
 
@@ -92,28 +93,53 @@ export class ChatHandler {
      * @param session 
      */
     async enterGameScene(msg: {press: number}, session: BackendSession) {
-        if(!msg) {
-            return {code: RES.ERR_SYSTEM, msg: null};
+        let result = this.authPlayerIsInRoom(session.uid);
+        if(result.code != RES.OK) {
+            return result;
         }
-        let openId = session.uid;
-
-        let player = this.onlinePlayerList[openId];
-        if(!player) {
-            return {code: RES.ERR_SYSTEM, msg: null};
-        }
-
-        let room = this.roomList[player.roomId];
-        if(!room) {
-            return {code: RES.ERR_SYSTEM, msg: null};
-        }
+        let player = result.msg.player;
+        let room = result.msg.room;
 
         room.enterGameScene(player);
 
         return {code: RES.OK, msg: {}};
     }
-
+    /**
+     * 在帧同步期间收到
+     * @param msg 
+     * @param session 
+     */
     async ReceivedPlayerCommand(msg: Action, session: BackendSession) {
-        let openId = session.uid;
+        let result = this.authPlayerIsInRoom(session.uid);
+        if(result.code != RES.OK) {
+            return result;
+        }
+        let player = result.msg.player;
+        let room = result.msg.room;
+
+        if(room.status == Status.Playing) {
+            room.addAction(msg, player.seatId);
+            return {code: RES.OK, msg: {}}
+        }
+        return {code: RES.ERR_SYSTEM, msg: {}}
+    }
+
+    async gameOver(msg: any, session: BackendSession) {
+        let result = this.authPlayerIsInRoom(session.uid);
+        if(result.code != RES.OK) {
+            return result;
+        }
+        let player = result.msg.player;
+        let room = result.msg.room;
+
+        await room.gameOver(msg, player.seatId);
+        
+        return {code: RES.OK, msg: {playerSeatId: player.seatId, msg: msg}}
+    }
+    /**
+     * 验证玩家是否在房间
+     */
+    authPlayerIsInRoom(openId: string) {
         if(!openId) {
             return {code: RES.ERR_SYSTEM, msg: null}
         }
@@ -132,9 +158,7 @@ export class ChatHandler {
             return {code: RES.ERR_SYSTEM, msg: null}
         }
 
-        room.addAction(msg, player.seatId);
-
-        return {code: RES.OK, msg: {}}
+        return {code: RES.OK, msg: {player: player, room: room}};
     }
     /**
      * 玩家退出房间
