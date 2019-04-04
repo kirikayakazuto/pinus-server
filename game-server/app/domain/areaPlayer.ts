@@ -67,7 +67,6 @@ export default class AreaPlayer {
         this.state = Status.Playing;
     }
 
-
     /**
      * 结算游戏
      * 更新玩家的金币数目
