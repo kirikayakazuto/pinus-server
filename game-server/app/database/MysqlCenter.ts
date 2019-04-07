@@ -1,8 +1,9 @@
 import * as mysql from "mysql"
 import * as util from "util";
 import { UserInfo } from "../gameInterface";
-import GameConfig from "../gameConfig";
+import DataBaseConfig from "./DateBaseConfig";
 import AreaPlayer from "../domain/areaPlayer";
+import utils from "../util/utils";
 
 
 export default class MysqlCenter {
@@ -136,6 +137,46 @@ export default class MysqlCenter {
     static async getFightHistoryByOpenId(openId: string) {
 
     }
+    /**
+     * --------------------------------------------- 每日登录 ------------------------------------------
+     */
+    static async getLoginBonuesInfo(openId: string) {
+        let sql = "select bonues, status, bonues_time, days from login_bonues where openId = \"%s\" limit 1";
+        let sqlCmd = util.format(sql, openId);
+
+        return await MysqlCenter.mysqlExec(sqlCmd);
+    }
+    // 今日待领的奖励
+    static async insertUserLoginBonues(openId: string, bonues: number) {
+        let time = utils.timestamp();
+        let sql = "insert into login_bonues(`openId`, `bonues`, `bonues_time`, `days`)values(\"%s\", %d, %d, %d)";
+        let sqlCmd = util.format(sql, openId, bonues, time, 1);
+
+        return await MysqlCenter.mysqlExec(sqlCmd);
+    }
+
+    static async updateUserLoginBonuesInfo(openId: string, bonues: number, days: number) {
+        let time = utils.timestamp();
+        let sql = "update login_bonues set days = %d, bonues_time = %d, status = 0, bonues = %d where openId = \"%s\" limit 1";
+        let sqlCmd = util.format(sql, days, time, bonues, openId);
+
+        return await MysqlCenter.mysqlExec(sqlCmd);
+    }
+
+    static async updateUserLoginBonuesRecved(openId: string) {
+        let sql = "update login_bonues set status = 1 where openId = \"%s\" limit 1"
+        let sqlCmd = util.format(sql, openId);
+
+        return await MysqlCenter.mysqlExec(sqlCmd);
+    }
+
+
 }
 
-MysqlCenter.connectToCenter(GameConfig.centerDatabase.host, GameConfig.centerDatabase.port, GameConfig.centerDatabase.db_name, GameConfig.centerDatabase.uname, GameConfig.centerDatabase.upwd);
+MysqlCenter.connectToCenter(
+    DataBaseConfig.mysqlConfig.host, 
+    DataBaseConfig.mysqlConfig.port, 
+    DataBaseConfig.mysqlConfig.db_name, 
+    DataBaseConfig.mysqlConfig.uname,
+    DataBaseConfig.mysqlConfig.upwd
+    );

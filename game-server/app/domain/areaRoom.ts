@@ -19,6 +19,7 @@ export default class AreaRoom {
     roomId = "";                // 房间id 唯一标识      随机字符串, 让其他玩家无法进入
     minChip = 100;              // 最低进入金币
     betChip = 100;              // 没把所需的金币数目
+    betExp = 100;
 
     maxNum = 2;                 // 房间最大人数
     playerList: Array<AreaPlayer> = [null, null];
@@ -57,19 +58,16 @@ export default class AreaRoom {
      * @param minChip 
      * @param betChip 
      */
-    initConfig(maxNum: number, minChip: number, betChip: number) {
+    initConfig(maxNum: number, minChip: number, betChip: number, betExp: number) {
         this.maxNum = maxNum;
         this.minChip = minChip;
         this.betChip = betChip;
+        this.betExp = betExp;
 
         this.actionPool = new ActionPool(5);
         this.frameData = new FrameData();
         this.actionQueue = new Queue<Action>(100);
     }
-    
-
-    
-    
     /**
      * --------------------- 游戏开始前   进入房间 退出房间, 玩家坐下, 玩家站起 ---------------------
      */

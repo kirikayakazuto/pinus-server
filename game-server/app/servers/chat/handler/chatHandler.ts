@@ -4,13 +4,15 @@ import MysqlCenter from '../../../database/MysqlCenter';
 import RES from '../../../RES';
 import AreaPlayer from '../../../domain/areaPlayer';
 import AreaRoom from '../../../domain/areaRoom';
-import GameConfig from '../../../gameConfig';
+import GameServerConfig from "../../../GameServerConfig"
 import utils from '../../../util/utils';
 import { isDate } from 'util';
 import Action from '../../../service/Action';
 import { Status } from '../../../gameInterface';
+import loginBonues from '../../../domain/loginBonues';
+import RedisCenter from '../../../database/RedisCenter';
 
-const roomConfig = GameConfig.roomConfig;
+const roomConfig = GameServerConfig.roomConfig;
 
 export default function(app: Application) {
     let chat = new ChatHandler(app);
@@ -227,7 +229,7 @@ export class ChatHandler {
      */
     doAllocRoom(roomId: string, areaId: number) {
         let room = new AreaRoom(areaId, roomId);    // 有可能报错, 无areaId 玩家强行登入
-        room.initConfig(roomConfig.maxNum, roomConfig.minChip, roomConfig.betChip);               // 测试数据, 正式数据应当写在json文件中
+        room.initConfig(roomConfig.maxNum, roomConfig.minChip, roomConfig.betChip, roomConfig.betExp);
         this.roomList[roomId] = room;
         return room;
     }
@@ -257,14 +259,6 @@ export class ChatHandler {
         
         return player;
     }
-    /**
-     * 玩家移动
-     * @param msg 
-     * @param session 
-     */
-    async move(msg: {areaId: number}, session: BackendSession) {
-
-    }
 
     /**
      * 进入游戏区间
@@ -286,7 +280,51 @@ export class ChatHandler {
         this.onlinePlayerList[player.openId] = player;
         player.enterArea(msg.areaId, session.frontendId);
 
-        return {code: RES.OK, msg: {}}
+        // 添加到redis中
+        RedisCenter.setUserInfoInRedis(player.playerInfo);
+        RedisCenter.updateWorldRankInfo("WorldRankByChip", player.openId, player.playerInfo.chip);
+        RedisCenter.updateWorldRankInfo("WorldRankByExp", player.openId, player.playerInfo.exp);
+        RedisCenter.updateWorldRankInfo("WorldRankByCheckPoint", player.openId, 0);
+
+        // 检查这个玩家是否已经领取了登录奖励
+        let result = await loginBonues.checkHasLoginBonues(player);
+        if(result.code != RES.OK) {
+            return result;
+        }
+        return {code: RES.OK, msg: "玩家进入游戏区间"}
+    }
+
+    /**
+     * 获取签到信息, 在前端展示
+     * @param player 
+     */
+    async getLoginBonuesInfo(msg: {}, session: BackendSession) {
+        let openId = session.uid;
+        let player = this._checkPlayerInArea(openId);
+        if(!player) return {code: RES.ERR_SYSTEM, msg: {}};
+
+        let data = await loginBonues.getLoginBonuesInfo(player);
+        return data;
+    }
+
+    async getLoginBonuesResult(msg: {}, session: BackendSession) {
+        let openId = session.uid;
+        let player = this._checkPlayerInArea(openId);
+        if(!player) return {code: RES.ERR_SYSTEM, msg: {}};
+
+        let resule = await loginBonues.getLoginBonuesResult(player);
+        return resule;
+    }
+
+    /**
+     * 检查玩家是否在服务器
+     */
+    _checkPlayerInArea(openId: string) {
+        if(!openId) {
+            return null;
+        }
+        let player = this.onlinePlayerList[openId];
+        return player;
     }
 
     /**

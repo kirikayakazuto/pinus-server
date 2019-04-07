@@ -2,7 +2,7 @@ import { dispatch } from '../../../util/dispatcher';
 import { Application , BackendSession} from 'pinus';
 import MysqlCenter from '../../../database/MysqlCenter';
 import { UserInfo } from '../../../gameInterface';
-import GameConfig from '../../../gameConfig';
+import DataBaseConfig from '../../../database/DateBaseConfig';
 import authWXServer from '../../../util/authWXServer';
 import { any } from 'bluebird';
 import RES from '../../../RES';
@@ -41,8 +41,8 @@ export class GateHandler {
             // 插入一个新玩家
             await MysqlCenter.insertPlayerByopenId(userInfo);
 
-            userInfo.chip = GameConfig.centerDatabase.defaultChip;
-            userInfo.exp = GameConfig.centerDatabase.defaultexp;
+            userInfo.chip = DataBaseConfig.mysqlConfig.defaultChip;
+            userInfo.exp = DataBaseConfig.mysqlConfig.defaultExp;
 
         }else { // 将玩家信息返回
             if(userArr[0].can_login != 1) {         // 玩家被封号

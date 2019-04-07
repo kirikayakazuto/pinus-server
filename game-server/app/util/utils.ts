@@ -62,4 +62,44 @@ export default class utils {
         };
         return fmt;
     }
+
+    /**
+     * --------------------------------- 时间戳 ----------------------------
+     */
+    // 返回当前的时间戳
+    static timestamp(): number {
+        let date = new Date();
+        let time = Date.parse(date.toString());
+
+        time /= 1000;
+        return time;
+    }
+    // 
+    static timestamp2date(time: number): Array<any> {
+        let date = new Date();
+        date.setTime(time * 1000);
+        return [date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds()];
+    }
+    // 
+    static date2timestamp(strtime: string): number {
+        let date = new Date(strtime.replace(/-/g, '/'));
+        let time = Date.parse(date.toString());
+        return (time/1000);
+    }
+    // 返回当前的时间戳
+    static timestamp_today(): number {
+        let date = new Date();
+        date.setHours(0);
+        date.setMinutes(0);
+        date.setSeconds(0);
+
+        let time = Date.parse(date.toString());
+        time /= 1000;
+        return time;
+    }
+    // 返回昨天的时间戳
+    static timestamp_yesterday(): number {
+        let time = this.timestamp_today();
+        return (time  - 24 * 60 * 60);
+    }
 }
